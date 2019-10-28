@@ -1,0 +1,72 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1433749",
+      "name": "fork",
+      "font_class": "fork",
+      "unicode": "e63e",
+      "unicode_decimal": 58942
+    },
+    {
+      "icon_id": "1505688",
+      "name": "星星",
+      "font_class": "xingxing",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "2076328",
+      "name": "更多",
+      "font_class": "gengduo",
+      "unicode": "e8a6",
+      "unicode_decimal": 59558
+    },
+    {
+      "icon_id": "2357626",
+      "name": "code",
+      "font_class": "code",
+      "unicode": "e842",
+      "unicode_decimal": 59458
+    },
+    {
+      "icon_id": "5478618",
+      "name": "link",
+      "font_class": "link",
+      "unicode": "e932",
+      "unicode_decimal": 59698
+    },
+    {
+      "icon_id": "6560971",
+      "name": "拍照",
+      "font_class": "paizhao",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "6567988",
+      "name": "发项目",
+      "font_class": "faxiangmu",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "6808471",
+      "name": "Gmail",
+      "font_class": "Gmail",
+      "unicode": "edc5",
+      "unicode_decimal": 60869
+    },
+    {
+      "icon_id": "9102226",
+      "name": "home",
+      "font_class": "list-space",
+      "unicode": "e65c",
+      "unicode_decimal": 58972
+    }
+  ]
+}

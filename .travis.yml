@@ -13,5 +13,10 @@ deploy:
   target-branch: master
   verbose: true
   keep-history: true
+  name: vxhly
+  email: pengchengou@gmail.com
   on:
     branch: gh-pages
+branches:
+  only:
+    - gh-pages

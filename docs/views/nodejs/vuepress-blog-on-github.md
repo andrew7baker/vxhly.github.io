@@ -66,6 +66,35 @@ server public # 需要提前安装 serve（开启本地的一个服务器, 执�
 以下只提供 [vuepress-theme-reco 博客主题文档](https://vuepress-theme-reco.recoluan.com/) 中未提及的配置项
 :::
 
+### last-updated
+
+::: warning 注意
+无需重新按照该插件, 直接进入配置即可, 这个插件也可不进行配置，至于为啥要在本博文中写出（PS： 默认显示的时间格式可读性比较差，所以需要进行格式化一下）
+:::
+
+显示最后的更新时间插件, 先上插件文档 [@vuepress/last-updated](https://vuepress.vuejs.org/zh/plugin/official/plugin-last-updated.html)
+
+再上配置, `/.vuepress/config.js` 
+
+``` javascript
+module.exports = {
+    plugins: [
+        [
+            '@vuepress/last-updated',
+            {
+                transformer: (timestamp, lang) => {
+                    // 不要忘了安装 moment
+                    // moment 时间格式化文档戳这里 http://momentjs.cn/
+                    const moment = require('moment')
+                    moment.locale(lang)
+                    return moment(timestamp).fromNow()
+                }
+            }
+        ]
+    ]
+}
+```
+
 ### medium-zoom
 
 ::: warning 注意
@@ -160,6 +189,8 @@ module.exports = {
 接下来就是 `icons` 了, 根据你配置的 `manifest.json` 进行裁剪图标即可
 
 第二：在 `.vuepress/config.js` 中添加配置（PS：该步骤略过, 文档中已经提供了）
+
+部署之后，你会神奇的发现在你浏览器地址栏的右边出现了一个 `+` 号的图标，小主可点击本博客上的 `+` 号的图标查看效果
 
 ### copyright
 
@@ -379,8 +410,11 @@ git add -A
 git commit -m "$commitmsg"
 
 # 如果发布到 https://<USERNAME>.github.io
+
 # 将 <USERNAME> 替换成你的 GitHub 名字
+
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git gh-pages:gh-pages
+
 ``` 
 
 ### 自动化脚本

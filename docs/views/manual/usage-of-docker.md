@@ -6,7 +6,7 @@ tags: [liunx, docker]
 date: 2019-03-26 14:41:23
 ---
 
-::: tip
+::: tip 前言
 Docker 是一个开源的应用容器引擎, 基于 Go 语言 并遵从Apache2.0协议开源。 Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中, 然后发布到任何流行的 Linux 机器上, 也可以实现虚拟化
 :::
 <!-- more -->
@@ -17,7 +17,7 @@ Docker 是一个开源的应用容器引擎, 基于 Go 语言 并遵从Apache2.0
 
 ## docker 文档
 
-::: tip
+::: tip 提示
 这里只找到了英文的文档, 所以英文不好的慎阅 [官方 docker 文档](https://docs.docker.com)  [非官方 docker 整理文档](https://docker_practice.gitee.io/)
 :::
 

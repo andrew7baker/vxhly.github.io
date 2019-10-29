@@ -6,7 +6,7 @@ tags: [Security, Command]
 date: 2016-08-02 18:59:24
 ---
 
-::: tip
+::: tip 前言
 记录 windows 下常用的 CMD 命令
 :::
 <!-- more -->

@@ -6,7 +6,7 @@ tags: [Criterion, HTML5, CSS]
 date: 2016-10-03 21:45:11
 ---
 
-::: tip
+::: tip 前言
 介绍 HTML 和 CSS 的格式和代码规范, 旨在提高代码质量和协作效率
 :::
 <!-- more -->

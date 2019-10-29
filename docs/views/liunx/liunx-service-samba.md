@@ -6,7 +6,7 @@ tags: [Liunx, Service, Security, Protocol]
 date: 2016-09-19 19:33:21
 ---
 
-::: tip
+::: tip 前言
 本篇是 Liunx 的服务配置笔记系列第五篇, 这一篇将具体介绍 Red Hat Liunx 下 SAMBA 服务的安全配置。所谓 SAMBA 就是建立 Liunx 和 Windows 之间的共享, 使 Windows 能够访问 Liunx 下共享出来的文件
 :::
 <!-- more -->
@@ -17,7 +17,7 @@ date: 2016-09-19 19:33:21
 
 ## 服务的启动与停止
 
-::: tip
+::: tip 提示
 SAMBA 的服务名并不叫做 `samba` , 而是 `smb` 。<br>
 修改配置文件过后一定要重启 `smb` 服务。
 :::
@@ -70,7 +70,7 @@ workgroup = MYGROUP
 ;netbios name = MYSERVER
 ```
 
-::: tip
+::: tip 提示
 该文件默认配置的工作组是 MYGROUP, 而 Windows 下的工作组默认为 WORKGROUP, Liunx 和 Windows 的工作组一定要一样, 才能访问共享的文件。<br>
 该文件默认将 NetBIOS 的名字注释掉了, NetBIOS 名字就是会在 Windows 下的网上邻居能够看到的名字, 注释掉就是会看不到, 建议去掉注释。
 :::
@@ -113,7 +113,7 @@ encrypt passwords = yes
 passdb backend = tdbsam
 ```
 
-::: tip
+::: tip 提示
 默认的配置为 `tdbsam` , 配置这个选项就是需要 `smbpasswd -a [userName]` 来建立 Samba 用户。还可以配置项为 `tdbsam/smbpasswd/ldapsam/mysql` 。可以根据需求进行修改。
 :::
 
@@ -132,7 +132,7 @@ passdb backend = tdbsam
 ;hosts allow = 127\. 192.168.12\. 192.168.13.
 ```
 
-::: tip
+::: tip 提示
 默认的配置是将白名单进行注释掉的, 这里需要注意的是, 可以配置一个具体的 IP 地址, 也可以配置一个 IP 地址段, 在配置 IP 地址段的时候要注意最后一个 `.` 不要忘了写。如默认配置中的 `127.` 就是规定 `127.0.0.1 ～ 127.255.255.254` 这个 IP 地址段可以进行访问, 具体的 IP 地址不需要最后的 `.` .
 :::
 
@@ -173,8 +173,8 @@ mkdir /hoem/test
 chmod 777 /home/test
 ```
 
-::: warning
-注意共享目录一定要有执行权限, 一般 `755` 就够了, 这里设置 `777` 就是权限大一点就是了。
+::: warning 注意
+共享目录一定要有执行权限, 一般 `755` 就够了, 这里设置 `777` 就是权限大一点就是了。
 :::
 
 ![SAMBA 服务安全配置](http://oss-blog.test.upcdn.net/liunx-samba-7.png)
@@ -190,7 +190,7 @@ smbpasswd -a zc
 smbpasswd -a sx
 ```
 
-::: warning
+::: warning 注意
 这里需要注意的是, 要使用 `smbpasswd -a` 创建用户, 因为之前设置了用户密码的存储方式为 `tdbsam` 。
 :::
 
@@ -218,7 +218,7 @@ smbclient -L [ip] -U [userName]%[password]
 
 #### 像 FTP 客户端一样使用 smbclient
 
-::: tip
+::: tip 提示
 执行 smbclient 命令成功后, 进入 smbclient 环境, 出现提示符: `smb:\>` 这里有许多命令和 ftp 命令相似, 如 `cd` 、 `lcd` 、 `get` 、 `megt` 、 `put` 、 `mput` 等。通过这些命令, 我们可以访问远程主机的共享资源。
 :::
 

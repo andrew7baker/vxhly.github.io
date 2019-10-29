@@ -6,14 +6,14 @@ tags: [Liunx, Node.js, Hexo]
 date: 2016-08-03 13:11:30
 ---
 
-::: tip
+::: tip 前言
 Hexo 是一个快速, 简单而高效的静态博客框架, 本文将介绍如何在 GitHub 上使用 Hexo+NexT 搭建静态博客
 :::
 <!-- more -->
 
 ## 准备
 
-::: tip
+::: tip 提示
 你需要在 [Github](//github.com/) 上创建一个属于自己的账户, 然后新建一个仓库（new repository）, 并命名为 YourSiteName.github.io, 此时 Github 会帮助你初始化一个静态网页, 你可以根据自己的喜好选择一些模版（这都不是重点）, 接着尝试访问下你所建的站点, 成功后就可以开始动工了。
 ::: 
 
@@ -36,7 +36,7 @@ sudo apt-get install git
 
 ## Hexo 初始化博客框架
 
-::: tip
+::: tip 提示
 参考链接<br>
 [Hexo 官网](//hexo.io/zh-cn/)<br>
 [Hexo 配置文档](//hexo.io/zh-cn/docs/)<br>
@@ -166,7 +166,7 @@ hexo generate
 
 ## 使用 NexT 主题让站点更酷炫
 
-::: tip
+::: tip 提示
 参考链接<br>
 [NexT 参考文档](//theme-next.iissnan.com/)<br>
 [NexT 主题配置](//theme-next.iissnan.com/theme-settings.html)<br>

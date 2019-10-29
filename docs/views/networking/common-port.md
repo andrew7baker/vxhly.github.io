@@ -6,7 +6,7 @@ tags: [Network, Security , Windows, Liunx, Protocol, Pentest]
 date: 2016-08-16 16:04:29
 ---
 
-::: tip
+::: tip 前言
 列出 TCP/UDP 协议常见的端口号占用情况, 以助于分析该服务器开放了哪些端口号, 或者程序占用了哪些端口号
 :::
 <!-- more -->

@@ -3,11 +3,10 @@ author: 星火燎原@vxhly
 title: 谈谈 WEB 前端主流的三大框架
 categories: [web]
 tags: [Vue.js, React.js, Angular.js, Node.js]
-abbrlink: 65cc14e3
 date: 2019-04-08 10:09:47
 ---
 
-::: tip
+::: tip 前言
 讲到前端的框架, 大家想必都能脱口而出: Angular、React、Vue, 那么这几个框架的优缺点, 以及在项目当中如何抉择框架的使用等等, 本篇就将介绍这三大框架的使用感受
 :::
 <!-- more -->
@@ -206,21 +205,21 @@ date: 2019-04-08 10:09:47
 ### 不同点
 
 * Angular.js 的学习成本比 Vue.js 高，比如增加了 `Dependency Injection（依赖注入）` 特性，而 Vue.js 本身提供的 API 都比较简单、直观；而最新版的 Angular.js 直接采用 TypeScript 编写，Vue.js 3.x 版本虽然源码是采用 TypeScript 编写，但是实际项目中可以不用 TypeScript，即是一个渐进式框架
-* 在性能上，Angular.js 依赖对数据做 `脏检查` ，所以 Watcher 越多越慢。Vue.js 使用基于依赖追踪的观察并且使用异步队列更新，所以的数据都是独立触发的
+* 在性能上, Angular.js 依赖对数据做 `脏检查` , 所以 Watcher 越多越慢。Vue.js 使用基于依赖追踪的观察并且使用异步队列更新, 所以的数据都是独立触发的
 
 ## Vue 与 React 的区别
 
 ### 相同点
 
-* react 采用特殊的 JSX 语法，Vue.js 在组件开发中也推崇编写 `.vue` 特殊文件格式，对文件内容都有一定的约定，两者都需要编译后使用
-* 中心思想: 一切都是组件，组件实例之间可以互相嵌套
-* 都提供合理的钩子函数，可以让开发者定制化的去处理需求
-* 都不内置函数 AJAX，Route等功能和到和行包，而是以插件的方式加载
+* react 采用特殊的 JSX 语法, Vue.js 在组件开发中也推崇编写 `.vue` 特殊文件格式, 对文件内容都有一定的约定, 两者都需要编译后使用
+* 中心思想: 一切都是组件, 组件实例之间可以互相嵌套
+* 都提供合理的钩子函数, 可以让开发者定制化的去处理需求
+* 都不内置函数 AJAX, Route等功能和到和行包, 而是以插件的方式加载
 * 在组件开发中都支持 mixins 的特性
 
 ### 不同点
 
-* React 依赖 Virtual DOM，而 Vue.js 使用的是 DOM 模板。React 采用 Virtual DOM 会对渲染出来的结果做 `脏检查` 
+* React 依赖 Virtual DOM, 而 Vue.js 使用的是 DOM 模板。React 采用 Virtual DOM 会对渲染出来的结果做 `脏检查` 
 * React 不支持双向绑定（需要自己编写相关的 change 函数）
-* Vue.js 在模板中提供了指令、过滤器等，可以非常方便，快捷的操作 DOM
+* Vue.js 在模板中提供了指令、过滤器等, 可以非常方便, 快捷的操作 DOM
 

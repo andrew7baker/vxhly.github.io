@@ -6,7 +6,7 @@ tags: [Vue.js, Vuex, VueRouter, Node.js]
 date: 2018-09-23 15:19:43
 ---
 
-::: tip
+::: tip 前言
 自从 vue cli 升级到 3.0 之后, vue 项目对 TypeScript 的支持度也不断的提升, 为了更好的学习 TypeScript, 本篇文章记录着 vue 全家桶结合 TypeScript 的食用方式
 :::
 <!-- more -->
@@ -102,7 +102,7 @@ TypeScript 是一种由微软开发的自由和开源的编程语言。它是 Ja
 
 #### watch
 
-::: tip
+::: tip 提示
 @Watch(path: string, options: WatchOptions = {})
 :::
 

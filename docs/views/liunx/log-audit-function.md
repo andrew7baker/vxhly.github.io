@@ -6,7 +6,7 @@ tags: [Liunx, Security, Pentest]
 date: 2016-10-16 13:39:09
 ---
 
-::: tip
+::: tip 前言
 本系列笔记又是 Liunx 学习系列教程的一大步, 本系列学习笔记记录 RedHat 系统的安全加固。本篇笔记是记录系统日志审计的配置, 加强系统的防御能力
 :::
 <!-- more -->
@@ -48,8 +48,8 @@ chkconfig psacct on
 * `auditd` 审计进程日志记录在 `/var/log/audit/audit.log` 
 * `psacct` 日志记录在 `/var/account/pacct` 
 
-::: warning
-注意: `pacct` 日志是二进制文件, 使用以下命令进行查看
+::: warning 注意
+`pacct` 日志是二进制文件, 使用以下命令进行查看
 :::
 
 `For Exmaple:` 

@@ -6,7 +6,7 @@ tags: [MySQL, Security, Liunx, Service]
 date: 2016-10-30 16:02:43
 ---
 
-::: tip
+::: tip 前言
 数据库作为数据管理的平台, 它的安全性首先由系统内部和网络安全两部分来决定的。对于系统管理员来说, 首先要保证系统本身的安全, 在安装 MySQL 数据时, 需要对基础环境进行较好的配置。本篇笔记将记录在 RedHat Liunx 系统下 MySQL 数据库的安全加固方法
 :::
 <!-- more -->
@@ -281,7 +281,7 @@ FILE 权限允许用户在 MySQL 服务器具有写权限的目录下创建新�
 
 ### 加固
 
-::: tip
+::: tip 提示
 需要将之前的加固配置项（ `local-infile=0` ）清掉
 :::
 
@@ -296,8 +296,8 @@ mysql> flush privileges;
 
 ![MySQL 数据库加固](http://oss-blog.test.upcdn.net/mysql-reinforce-24.png)
 
-::: warning
-注意: 刷新授权表之后, 一定要重新登录再进行测试, 否则还是会执行成功的
+::: warning 注意
+刷新授权表之后, 一定要重新登录再进行测试, 否则还是会执行成功的
 :::
 
 当 `file_priv='N'` , 黑客进行以下语句的时候, 就会出错

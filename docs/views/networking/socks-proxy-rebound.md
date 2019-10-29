@@ -6,7 +6,7 @@ tags: [Network, Liunx, Pentest]
 date: 2016-11-24 14:46:22
 ---
 
-::: tip
+::: tip 前言
 对于渗透测试者来说, 如何绕过防火墙的阻挡在内网展开渗透测试成为需解决的问题, 本文介绍了在夺取映射到外网的内网服务器权限后, 如何利用 Socks 代理反弹获得内网访问权限
 :::
 <!-- more -->
@@ -42,8 +42,8 @@ cd ssocks-0.0.14
 ./configure && make
 ```
 
-::: warning
-注意: 编译的时候要先确定机子上有 gcc 环境, 没有的请自行安装
+::: warning 注意
+编译的时候要先确定机子上有 gcc 环境, 没有的请自行安装
 :::
 
 ### 功能
@@ -143,8 +143,8 @@ proxychains firefox
 
 机子: `kali Liunx` ；IP: `192.168.235.143` 
 
-::: warning
-注意: 现在已经可以直接访问内网主机了, IP: `192.168.235.142` 
+::: warning 注意
+现在已经可以直接访问内网主机了, IP: `192.168.235.142` 
 :::
 
 ![Socks 代理](http://oss-blog.test.upcdn.net/socks-proxy-6.png)

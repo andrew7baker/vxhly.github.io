@@ -6,7 +6,7 @@ tags: [Liunx, Security, Pentest]
 date: 2016-10-14 22:08:33
 ---
 
-::: tip
+::: tip 前言
 本系列笔记又是 Liunx 学习系列教程的一大步, 本系列学习笔记记录 RedHat 系统的安全加固。本篇笔记是记录用户和文件的权限（主要是特殊权限）, 加强系统的防御能力
 :::
 <!-- more -->
@@ -82,8 +82,8 @@ umask 002
 umask 022
 ```
 
-::: warning
-注意, 不要单纯的进行数字加减<br>
+::: warning 注意
+不要单纯的进行数字加减<br>
 比如, `umask 003` , 如果以数字加减, 则文件权限为 `666-003=663` , 相当于 `-rw-rw--wx` , 显然不正确, 应该先转换成权限属性再相减 `-rw-rw-rw-` 减去 `--------wx` , 即应该为 `-rw-rw-r--` <br>
 影响: 移动规范要求 `umask 027` , 这样生成的文件默认权限为 `-rw-r-----` , 只有本用户可读、写、执行。如果业务需要, 其他用户也需要操作该 用户的文件, 就会有问题。可以使用默认的 `022` 
 :::
@@ -184,7 +184,7 @@ chmod 600 /var/log/messages
 chmod 600 /etc/security
 ```
 
-::: warning
+::: warning 注意
 影响:  有的移动安全加固标准要求/etc 目录是 750 权限, 但如果/etc 目录是权限是 750（drwxr-x---）的话, 由于其他组没有 x 权限, 那么普通用户就无权访问/etc 目录以及以下所有文件, 用户获取不到基本的环境变量/etc/profile 和/etc/passwd、group 等文件, 一些基本命令都会出现问题, 本用户的文件只有 uid、gid, 无法对应名用户名称和组名称。
 :::
 
@@ -198,7 +198,7 @@ find / -type d -perm -0222 -exec ls -ldg {} \;
 
 ![RedHat 安全加固](http://oss-blog.test.upcdn.net/redhat-reinforce-13.png)
 
-::: tip
+::: tip 提示
 这些目录是存放每个用户临时文件的, 目录本身是带 `Sticky BIT` 粘滞位的, 即使里面的文件有 `o+w` 权限也没问题, 系统本身有保护性措施。
 ::: 
 
@@ -228,8 +228,8 @@ find / -nouser -o -nogroup -print
 find / -path "/proc" -prune -nouser -o -nogroup -exec chown nobody:nobody {} \;
 ```
 
-::: tip
-说明: 命令中排除了 /proc 目录
+::: tip 提示
+命令中排除了 /proc 目录
 :::
 
 ## 检查异常隐含文件

@@ -6,7 +6,7 @@ tags: [Liunx, Service, Security, Protocol]
 date: 2016-09-19 14:58:33
 ---
 
-::: tip
+::: tip 前言
 本篇是 Liunx 的服务配置笔记系列第四篇, 这一篇将具体介绍 Red Hat Liunx 下 APACHE 服务的安全配置。所谓 APACHE 就是一个 WEB 服务器, 为 WEB 网页提供服务
 :::
 <!-- more -->
@@ -17,7 +17,7 @@ date: 2016-09-19 14:58:33
 
 ## 服务的启动与停止
 
-::: tip
+::: tip 提示
 APACHE 的服务名并不叫做 `http` , 而是 `httpd` 。<br>
 修改配置文件过后一定要重启 `httpd` 服务。
 :::
@@ -40,7 +40,7 @@ DocumentRoot "/var/www/html"
 <Directory "/var/www/html">
 ```
 
-::: tip
+::: tip 提示
 APACHE 默认配置的网站根目录是在 `/var/www/html` 下, 我们可以根据需求修改它。修改这个配置项的时候, 还需同时修改 `<Directory "/var/www/html">` 这个配置项。
 :::
 

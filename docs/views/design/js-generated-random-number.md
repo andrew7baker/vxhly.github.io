@@ -6,7 +6,7 @@ tags: [JavaScript, Code]
 date: 2016-08-02 13:49:41
 ---
 
-::: tip
+::: tip 前言
 为 JS 中的 Math 对象新增生成不重复随机数方法
 :::
 <!-- more -->

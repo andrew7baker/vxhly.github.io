@@ -3,11 +3,10 @@ author: 星火燎原@vxhly
 title: 浅谈 SSH 服务
 categories: [liunx]
 tags: [Liunx, Security, Service]
-abbrlink: 5ec8ccce
 date: 2017-08-15 21:42:25
 ---
 
-::: tip
+::: tip 前言
 SSH 是每一台 Linux 系统的标准配置服务, 本文将总结 SSH 的常见用法
 :::
 <!-- more -->
@@ -56,7 +55,7 @@ SSH 之所以能够保证安全, 原因在于它采用了公钥加密。
 
 如果你是第一次登录对方主机, 系统会出现下面的提示: 
 
-::: tip
+::: tip 提示
 The authenticity of host 'host (12.18.429.21)' can't be established.<br>
 RSA key fingerprint is 98:2e:d7:e0:de:9f:ac:67:28:c2:42:2d:37:16:58:4d.<br>
 Are you sure you want to continue connecting (yes/no)?
@@ -70,19 +69,19 @@ Are you sure you want to continue connecting (yes/no)?
 
 假定经过风险衡量以后, 用户决定接受这个远程主机的公钥。
 
-::: tip
+::: tip 提示
 Are you sure you want to continue connecting (yes/no)? yes
 :::
 
 系统会出现一句提示, 表示 host 主机已经得到认可。
 
-::: tip
+::: tip 提示
 Warning: Permanently added 'host, 12.18.429.21' (RSA) to the list of known hosts.
 ::: 
 
 然后, 会要求输入密码。
 
-::: tip
+::: tip 提示
 Password: (enter password)
 :::
 

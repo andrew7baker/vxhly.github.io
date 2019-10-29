@@ -6,7 +6,7 @@ tags: [Security, Command, Pentest]
 date: 2016-08-11 20:46:27
 ---
 
-::: tip
+::: tip 前言
 记录 Windows 常见应用的运行快捷命令, 以下记录的命令默认为 win+R 组合键调出的窗口, 非命令提示符窗口
 :::
 <!-- more -->

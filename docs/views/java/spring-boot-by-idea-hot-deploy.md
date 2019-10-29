@@ -6,7 +6,7 @@ tags: [SpringBoot, Maven, Java]
 date: 2018-08-22 14:47:20
 ---
 
-::: tip
+::: tip 前言
 Spring Boot 是由 Pivotal 团队提供的全新框架, 其设计目的是用来简化新Spring应用的初始搭建以及开发过程。该框架使用了特定的方式来进行配置, 从而使开发人员不再需要定义样板化的配置。Spring Boot 的 Web 项目, 在每一次修改了 java 文件或者是 resource 的时候, 都必须去重启一下项目, 这样的话浪费了很多的时间, 实现了热部署, 在每一次作了修改之后, 都会自动的重启
 :::
 <!-- more -->
@@ -59,7 +59,7 @@ public class FirstApplication {
 }
 ```
 
-::: tip
+::: tip 提示
 `@SpringBootApplication` 是 Spring Boot 项目的核心注解, 主要目的是开启自动配置。main方法是一个标准的Java应用的main方法, 主要作用是作为项目启动的入口。
 :::
 

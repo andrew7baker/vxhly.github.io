@@ -6,7 +6,7 @@ tags: [Node.js, Angularjs]
 date: 2019-04-01 16:44:20
 ---
 
-::: tip
+::: tip 前言
 Angularjs 1.0 的学习笔记 
 :::
 <!-- more -->

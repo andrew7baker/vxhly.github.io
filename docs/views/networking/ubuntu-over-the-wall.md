@@ -6,7 +6,7 @@ tags: [Network, Liunx, Node.js]
 date: 2016-07-31 21:32:24
 ---
 
-::: tip
+::: tip 前言
 翻墙, 主要用于 npm 的代理。没有 vpn 服务器不要紧, 肯花点小钱就可以搞定（访问 [高梯子](//www.gaotizi.com/aff.php?aff=133)
 :::
 <!-- more -->

@@ -46,10 +46,7 @@
   a:hover {
     color: #333;
   }
-  p {
-    margin: 0;
-  }
-
+  
   .project-item {
     width: 320px;
     height: 160px;

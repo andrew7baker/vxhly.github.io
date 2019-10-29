@@ -6,7 +6,7 @@ tags: [HTML5, Moblie]
 date: 2016-08-22 16:21:30
 ---
 
-::: tip
+::: tip 前言
 记录 HTML5 通用的移动端和 PC 端头部标签, 即 meta 标签
 :::
 <!-- more -->

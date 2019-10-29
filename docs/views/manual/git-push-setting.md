@@ -6,7 +6,7 @@ tags: [Liunx, Protocol]
 date: 2016-07-31 16:09:21
 ---
 
-::: tip
+::: tip 前言
 Git 是一个开源的分布式版本控制系统, 可以有效、高速的处理从很小到非常大的项目版本管理
 :::
 <!-- more -->
@@ -65,7 +65,7 @@ ssh -T git@git.oschina.net
 
 ## 本地配置
 
-::: tip
+::: tip 提示
 尽量保持你的名字和你的邮箱和 GitHub 或 Git@OSC 的注册一致。
 :::
 
@@ -76,8 +76,8 @@ git config --global user.email "your email"
 
 ## 配置大小写敏感
 
-::: tip
-在 Git 中默认是不区分大小的，因此当你修改了文件名的大小写后，git并不会认为你有修改哦, 使用下面的配置可开启大小写敏感
+::: tip 提示
+在 Git 中默认是不区分大小的, 因此当你修改了文件名的大小写后, git并不会认为你有修改哦, 使用下面的配置可开启大小写敏感
 :::
 
 ``` bash
@@ -255,18 +255,18 @@ git submodule foreach git pull 拉取所有子模块
 删除子模块
 
 ``` bash
-# 逆初始化模块，其中{MOD_NAME}为模块目录，执行后可发现模块目录被清空
+# 逆初始化模块, 其中{MOD_NAME}为模块目录, 执行后可发现模块目录被清空
 git submodule deinit {MOD_NAME} 
 # 删除.gitmodules中记录的模块信息（--cached选项清除.git/modules中的缓存）
 git rm --cached {MOD_NAME} 
-# 提交更改到代码库，可观察到'.gitmodules'内容发生变更
+# 提交更改到代码库, 可观察到'.gitmodules'内容发生变更
 git commit -am "Remove a submodule." 
 ```
 
 修改模块的 URL
 
 1. 修改'.gitmodules'文件中对应模块的”url“属性; 
-2. 使用 `git submodule sync` 命令，将新的URL更新到文件 `.git/config` # git 中配置 autocrlf
+2. 使用 `git submodule sync` 命令, 将新的URL更新到文件 `.git/config` # git 中配置 autocrlf
 
 ## 换行符
 

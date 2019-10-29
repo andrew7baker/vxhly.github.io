@@ -12,7 +12,8 @@
           <a-row
             :gutter="20"
             type="flex"
-            justify="space-between"
+            align="middle"
+            justify="center"
           >
             <a-col
               v-for="(item, index) in projects"

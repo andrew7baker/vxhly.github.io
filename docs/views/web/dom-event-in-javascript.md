@@ -6,7 +6,7 @@ tags: [JavaScript, jQuery]
 date: 2016-10-28 16:59:57
 ---
 
-::: tip
+::: tip 前言
 这篇文章主要介绍了 JavaScript 中 DOM 0 级事件和 DOM 2 级事件的区别介绍
 :::
 <!-- more -->
@@ -71,7 +71,7 @@ $("#hash").click(function() {
 });
 ```
 
-::: tip
+::: tip 提示
 通过 jQuery 方法来绑定事件, 不会覆盖之前方法体里写的事件。
 :::
 
@@ -94,7 +94,7 @@ btn.addEventListener(
 );
 ```
 
-::: tip
+::: tip 提示
 通过原生的 JavaScript 方法来绑定事件, 会覆盖之前方法体里写的事件。
 :::
 

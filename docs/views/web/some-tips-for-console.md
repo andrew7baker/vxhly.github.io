@@ -3,11 +3,10 @@ author: 星火燎原@vxhly
 title: Console 的一些应用小技巧
 categories: [web]
 tags: [Debug, JavaScript]
-abbrlink: cab01f37
 date: 2016-08-10 16:57:53
 ---
 
-::: tip
+::: tip 前言
 一个简单而实用的控制台命令, 用来调试 JavaScript 代码的不合理性
 :::
 <!-- more -->

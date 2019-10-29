@@ -3,11 +3,10 @@ author: 星火燎原@vxhly
 title: ES6 学习笔记
 categories: [web]
 tags: [JavaScript, Node.js] 
-abbrlink: b0e3118c
 date: 2017-11-17 21:35:51
 ---
 
-::: tip
+::: tip 前言
 本篇学习笔记纯粹记录学习 ES6 的过程以及一些坑点, 下面的例子没有先后之分, 也是很简单的例子, 想了解更多的直接戳 [ECMAScript 6 入门](http://es6.ruanyifeng.com/)
 :::
 <!-- more -->

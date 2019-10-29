@@ -6,7 +6,7 @@ tags: [Liunx, Node.js, Hexo]
 date: 2017-10-28 20:24:59
 ---
 
-::: tip
+::: tip 前言
 HEXO 博客最近大更新, 页面与之前大不相同, 这里跟大家分享一下相关的设置方法
 :::
 <!-- more -->
@@ -122,7 +122,7 @@ tab_replace:
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js"></script>
 ```
 
-::: tip
+::: tip 提示
 这边不就贴关键代码了, 请移步 [clipboard.js](https://github.com/zenorocha/clipboard.js) [_layout.swig](https://github.com/vxhly/vxhly.github.io/blob/blog-source/themes/next/layout/_layout.swig)
 :::
 
@@ -235,13 +235,13 @@ vendors: #Internal version: 1.0 .0# https: //github.com/hustcc/canvas-nest.js
 
 ## 新的评论系统
 
-::: tip
+::: tip 提示
 自从多说和网易云跟帖都挂了之后, Next 官方引入了 Valine 这一款评论系统
 :::
 
 ### 关于 Valine 的介绍
 
-::: tip
+::: tip 提示
 请移步 [Valine -- 一款极简的评论系统](https://ioliu.cn/2017/add-valine-comments-to-your-blog/), 配置中出现 `leancloud application appid` 和 `leancloud application appkey` 获取方法也请看此链接
 :::
 

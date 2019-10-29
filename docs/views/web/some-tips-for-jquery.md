@@ -6,7 +6,7 @@ tags: [JavaScript, jQuery, Code]
 date: 2016-08-09 15:26:35
 ---
 
-::: tip
+::: tip 前言
 简单的窍门的集合, 用来帮助你 jQuery 代码的进阶
 :::
 <!-- more -->
@@ -345,8 +345,8 @@ $(document).ajaxError(function(e, xhr, settings, error) {
 </script>
 ```
 
-::: warning
-注意: 一定要先引入 prototype.js 再引入 jquery.js, 先后顺序不可错
+::: warning 注意
+一定要先引入 prototype.js 再引入 jquery.js, 先后顺序不可错
 :::
 
 ## 链式操作

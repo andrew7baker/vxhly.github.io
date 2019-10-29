@@ -6,12 +6,12 @@ tags: [Vue.js, Node.js, Component]
 date: 2019-04-28 17:19:49
 ---
 
-::: tip
+::: tip 前言
 本文旨在给大家提供一种构建一个完整 UI 库脚手架的思路: 包括如何快速并优雅地构建UI库的主页、如何托管主页、如何编写脚本提升自己的开发效率、如何生成 CHANGELOG 等
 :::
 <!-- more -->
 
-## 前言
+## 先言
 
 主流的开源 UI 库代码结构主要分为三大部分: 
 
@@ -19,19 +19,19 @@ date: 2019-04-28 17:19:49
 * 预览示例和查看文档的网站代码: 类似 Vant、ElementUI 这类网站。
 * 配置文件和脚本文件: 用于打包和发布等等
 
-::: tip
-编写此博文的灵感 UI 框架库（[vue-cards](https://github.com/Eamonnzhang/vue-cards)）, PS: 此 UI　框架库相对于　Vant、ElementUI　会比较简单点，可以作为一份自定义　UI　框架库的入坑　demo，同时这篇博文也是解读这份 UI 框架库的构建到上线的一个过程
+::: tip 提示
+编写此博文的灵感 UI 框架库（[vue-cards](https://github.com/Eamonnzhang/vue-cards)）, PS: 此 UI　框架库相对于　Vant、ElementUI　会比较简单点, 可以作为一份自定义　UI　框架库的入坑　demo, 同时这篇博文也是解读这份 UI 框架库的构建到上线的一个过程
 :::
 
 ## 前置工作
 
-以下工作全部基于 Vue CLI 3.x，所以首先要保证机子上有 `@vue/cli` 
+以下工作全部基于 Vue CLI 3.x, 所以首先要保证机子上有 `@vue/cli` 
 
 ``` bash
 vue create vtp-component ## vtp-component 作为教学的库名
 ```
 
-`vue-router` , `dart-sass` , `babel` , `eslint` 这些是该项目使用的依赖项，小主可以根据自己的需求进行相应的切换
+`vue-router` , `dart-sass` , `babel` , `eslint` 这些是该项目使用的依赖项, 小主可以根据自己的需求进行相应的切换
 
 ## start
 
@@ -39,7 +39,7 @@ vue create vtp-component ## vtp-component 作为教学的库名
 
 ### 工作目录
 
-在根目录下新增四个文件夹，一个用来存放组件的代码（packages）, 一个用来存放 预览示例的网站 代码（examples）（这里直接把初始化模板的 src 目录更改为 examples 即可，有需要的话可以将该目录进行清空操作，这里就不做过多的说明），一个用来存放编译脚本代码（build），一个用来存放自定义生成组件和组件的说明文档等脚本（scripts）
+在根目录下新增四个文件夹, 一个用来存放组件的代码（packages）, 一个用来存放 预览示例的网站 代码（examples）（这里直接把初始化模板的 src 目录更改为 examples 即可, 有需要的话可以将该目录进行清空操作, 这里就不做过多的说明）, 一个用来存放编译脚本代码（build）, 一个用来存放自定义生成组件和组件的说明文档等脚本（scripts）
 
 ``` text
 |-- build
@@ -53,7 +53,7 @@ vue create vtp-component ## vtp-component 作为教学的库名
 
 ### 让 webpack 编译 examples
 
-由于我们将 src 目录修改成了 examples，所以在 `vue.config.js` 中需要进行相应的修改
+由于我们将 src 目录修改成了 examples, 所以在 `vue.config.js` 中需要进行相应的修改
 
 ``` javascript
 const path = require('path')
@@ -107,7 +107,7 @@ module.exports = {
 
 #### 创建组件和组件文档生成脚本
 
-在 `scripts` 中创建以下几个文件，其中 `create-comp.js` 是用来生成自定义组件目录和自定义组件说明文档脚本， `delete-comp.js` 是用来删除无用的组件目录和自定义组件说明文档脚本， `template.js` 是生成代码的模板文件
+在 `scripts` 中创建以下几个文件, 其中 `create-comp.js` 是用来生成自定义组件目录和自定义组件说明文档脚本,  `delete-comp.js` 是用来删除无用的组件目录和自定义组件说明文档脚本,  `template.js` 是生成代码的模板文件
 
 ``` text
 |-- create-comp.js
@@ -117,7 +117,7 @@ module.exports = {
 |-- template.js
 ```
 
-相关的代码如下，小主可以根据自己的需求进行相应的简单修改，下面的代码参考来源 [vue-cli3 项目优化之通过 node 自动生成组件模板 generate View、Component](https://juejin.im/post/5c6772ff518825629c56943c)
+相关的代码如下, 小主可以根据自己的需求进行相应的简单修改, 下面的代码参考来源 [vue-cli3 项目优化之通过 node 自动生成组件模板 generate View、Component](https://juejin.im/post/5c6772ff518825629c56943c)
 
 `create-comp.js` 
 
@@ -174,7 +174,7 @@ process.stdin.on('data', async chunk => {
 
         // 这里生成组件
         if (hasComponentDirectory) {
-            errorLog( `${inputName}组件目录已存在，请重新输入` )
+            errorLog( `${inputName}组件目录已存在, 请重新输入` )
             return
         } else {
             log( `生成 component 目录 ${componentDirectory}` )
@@ -427,7 +427,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 ```
 
-在 `build` 中创建以下几个文件，其中 `build-entry.js` 脚本是用来生成自定义组件导出 `packages/index.js` ， `get-components.js` 脚本是用来获取 `packages` 目录下的所有组件
+在 `build` 中创建以下几个文件, 其中 `build-entry.js` 脚本是用来生成自定义组件导出 `packages/index.js` ,  `get-components.js` 脚本是用来获取 `packages` 目录下的所有组件
 
 ``` text
 |--- build-entry.js
@@ -435,7 +435,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 |--- get-components.js
 ```
 
-相关的代码如下，小主可以根据自己的需求进行相应的简单修改，下面的代码参考来源 [vue-cards](https://github.com/Eamonnzhang/vue-cards)
+相关的代码如下, 小主可以根据自己的需求进行相应的简单修改, 下面的代码参考来源 [vue-cards](https://github.com/Eamonnzhang/vue-cards)
 
 `build-entry.js` 
 
@@ -525,11 +525,11 @@ module.exports = function() {
 
 #### 让 vue 解析 markdown
 
-::: tip
-文档中心的 UI 是如何编码的这里不做阐述，小主可以自行参照 [vue-cards](https://github.com/Eamonnzhang/vue-cards) 中的实现方式进行改造
+::: tip 提示
+文档中心的 UI 是如何编码的这里不做阐述, 小主可以自行参照 [vue-cards](https://github.com/Eamonnzhang/vue-cards) 中的实现方式进行改造
 :::
 
-需要安装以下的依赖，让 vue 解析 markdown
+需要安装以下的依赖, 让 vue 解析 markdown
 
 ``` bash
 npm i markdown-it-container -D
@@ -538,7 +538,7 @@ npm i markdown-it-task-checkbox -D
 npm i vue-markdown-loader -D
 ```
 
-关于 vue.config.js 的配置在 [vue-cards](https://github.com/Eamonnzhang/vue-cards) 该项目中也有了，不做阐述
+关于 vue.config.js 的配置在 [vue-cards](https://github.com/Eamonnzhang/vue-cards) 该项目中也有了, 不做阐述
 
 这里将补充高亮 `highlight.js` 以及点击复制代码 `clipboard` 的实现方式
 
@@ -548,7 +548,7 @@ npm i vue-markdown-loader -D
 npm i clipboard highlight.js
 ```
 
-改造 `App.vue` ，以下只是列出部分代码，小主可以根据自己的需求进行添加
+改造 `App.vue` , 以下只是列出部分代码, 小主可以根据自己的需求进行添加
 
 ``` html
 <script>
@@ -612,7 +612,7 @@ npm i clipboard highlight.js
 
 #### 生成命令
 
-在 `package.json` 中添加以下内容，使用命令 `yarn new:comp` 创建组件目录及其文档或者使用命令 `yarn del:comp` 即可删除组件目录及其文档
+在 `package.json` 中添加以下内容, 使用命令 `yarn new:comp` 创建组件目录及其文档或者使用命令 `yarn del:comp` 即可删除组件目录及其文档
 
 ``` json
 {
@@ -625,7 +625,7 @@ npm i clipboard highlight.js
 
 ## changelog
 
-在 `package.json` 中修改 script 字段，接下来你懂的，另一篇博客有介绍哦，小主可以执行搜索
+在 `package.json` 中修改 script 字段, 接下来你懂的, 另一篇博客有介绍哦, 小主可以执行搜索
 
 ``` json
 {

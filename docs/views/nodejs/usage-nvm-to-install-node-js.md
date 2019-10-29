@@ -3,11 +3,10 @@ author: 星火燎原@vxhly
 title: 使用 nvm 安装 Node.js
 categories: [nodejs]
 tags: [Liunx, Node.js]
-abbrlink: c6e979c
 date: 2016-07-31 15:11:44
 ---
 
-::: tip
+::: tip 前言
 安装 Node.js 的最佳方式是使用 nvm。nvm 最开始是在 `Mac OS` 下开发的, 所以 `Mac OS` 下同样使用 nvm 安装 Node.js
 :::
 <!-- more -->
@@ -48,7 +47,7 @@ npm -v
 
 ## npm 淘宝换源
 
-::: tip
+::: tip 提示
 npm 加载的模块, 多数是国外源的, 所以很容易被墙, 解决办法, 除了翻墙, 还有就是 npm 换源, 使用国内源, 但是本人还是推介使用国外源, 因为国外源较国内源稳定、全面。
 :::
 

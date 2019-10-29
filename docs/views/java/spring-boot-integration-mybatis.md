@@ -3,11 +3,10 @@ author: 星火燎原@vxhly
 title: Spring Boot 整合 Mybatis
 categories: [java]
 tags: [SpringBoot, Maven, Java, Mybatis, MySQL]
-abbrlink: h8923493
 date: 2018-08-22 16:01:15
 ---
 
-::: tip
+::: tip 提示
 MyBatis 是一款优秀的持久层框架, 它支持定制化 SQL、存储过程以及高级映射。MyBatis 避免了几乎所有的 JDBC 代码和手动设置参数以及获取结果集。这里介绍 Spring Boot 整合 Mybatis 的步骤, 数据库选用 MYSQL
 :::
 <!-- more -->

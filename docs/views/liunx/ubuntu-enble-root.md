@@ -6,7 +6,7 @@ tags: [Liunx]
 date: 2016-08-02 15:29:46
 ---
 
-::: tip
+::: tip 前言
 Ubuntu 默认不开启 root 账户的, 所以有需开启 root 账户的按照以下做法即可, 切换 root 账户后 chromium 浏览器不能使用 
 :::
 <!-- more -->
@@ -78,7 +78,7 @@ userdel -r userName
 sudo userdel -r userName
 ```
 
-::: warning
-注意: 因为需要彻底删除用户, 所以加上-r 的选项, 在删除用户的同时一起把这个用户的宿主目录和邮件目录删除；userName 需替换成你的原先账户名
+::: warning 注意
+因为需要彻底删除用户, 所以加上-r 的选项, 在删除用户的同时一起把这个用户的宿主目录和邮件目录删除；userName 需替换成你的原先账户名
 :::
 

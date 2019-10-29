@@ -16,7 +16,6 @@ export default {
       zoom: null
     }
   },
-
   mounted() {
     this.updateCopy()
   },
@@ -56,7 +55,7 @@ export default {
         false
       el.select()
       document.execCommand('copy')
-      message.success('复制成功，快去粘贴运行吧 !!!')
+      message.success('复制成功，快去粘贴使用吧 !!!')
       document.body.removeChild(el)
       if (selected) {
         document.getSelection().removeAllRanges()

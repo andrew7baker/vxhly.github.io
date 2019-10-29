@@ -3,18 +3,17 @@ author: 星火燎原@vxhly
 title: RESTful API 设计指南（补充）
 categories: [manual]
 tags: [Criterion] 
-abbrlink: 9cbc428
 date: 2017-09-29 12:17:33
 ---
 
-::: tip
+::: tip 前言
 网络应用程序, 分为前端和后端两个部分。这时候必须有一种统一的机制, 方便不同的前端设备与后端进行通信。这导致 API 构架的流行, 甚至出现 "API First" 的设计思想。[ `RESTful API` ](http://en.wikipedia.org/wiki/Representational_state_transfer) 是目前比较成熟的一套互联网应用程序的 API 设计理论
 :::
 <!-- more -->
 
 ## 先言
 
-::: tip
+::: tip 提示
 该篇博文为补充 [RESTful API 设计指南- 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2014/05/restful_api.html)
 
 [RESTful API 设计参考文献列表, 可帮助你更加彻底的了解REST风格的接口设计](https://github.com/aisuhua/restful-api-design-references)。
@@ -148,8 +147,8 @@ API 与用户的通信协议, 总是使用 [https](//www.ruanyifeng.com/blog/201
 
 * **500** `INTERNAL SERVER ERROR` -> 【 `*` 】 => 服务器遇到了一个未曾预料的状况，导致了它无法完成对请求的处理。
 * **501** `Not Implemented` -> 【 `*` 】 => 服务器不支持当前请求所需要的某个功能。
-* **502** `Bad Gateway` -> 【 `*` 】 => 作为网关或者代理工作的服务器尝试执行请求时，从上游服务器接收到无效的响应。
-* **503** `Service Unavailable` -> 【 `*` 】 => 由于临时的服务器维护或者过载，服务器当前无法处理请求。这个状况是临时的，并且将在一段时间以后恢复。
+* **502** `Bad Gateway` -> 【 `*` 】 => 作为网关或者代理工作的服务器尝试执行请求时, 从上游服务器接收到无效的响应。
+* **503** `Service Unavailable` -> 【 `*` 】 => 由于临时的服务器维护或者过载, 服务器当前无法处理请求。这个状况是临时的, 并且将在一段时间以后恢复。
 
 状态码的完全列表参见[这里](//www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)。
 

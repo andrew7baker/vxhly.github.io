@@ -6,7 +6,7 @@ module.exports = {
   "base": "/",
   "head": [
     ["link", {
-      "rel": "icon",
+      "rel": "shortcut icon",
       "href": "/favicon.ico"
     }],
     ["link", {
@@ -74,7 +74,7 @@ module.exports = {
       {
         "text": "Project",
         "link": "/project/",
-        "icon": "iconfont icon-faxiangmu"
+        "icon": "iconfont icon-project"
       },
       {
         "text": 'TimeLine',
@@ -141,6 +141,7 @@ module.exports = {
     "lineNumbers": true
   },
   "plugins": [
+    // ['vuepress-plugin-smooth-scroll'],
     ["@vuepress/medium-zoom", {
       "selector": ".page img",
       "options": {
@@ -162,11 +163,7 @@ module.exports = {
     ["copyright", {
       "noCopy": true,
       "minLength": 150,
-      // the selected text will be uncopiable
-      // disable the plugin by default
-      // you can activate the plugin in frontmatter
       "disabled": false,
-      // // texts will be unselectable
       "noSelect": true
     }],
     [

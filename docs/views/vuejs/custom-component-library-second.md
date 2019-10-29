@@ -2,11 +2,11 @@
 author: 星火燎原@vxhly
 title: 使用 Vue cli 3.0 构建自定义组件库(第二弹)
 categories: [vuejs]
-tags: [Vue.js, Node.js, Component]
+tags: [Vue.js, Node.js, Component, VuePress]
 date: 2019-08-16 09:30:20
 ---
 
-::: tip
+::: tip 前言
 本文旨在给大家提供一种构建一个完整 UI 库脚手架的思路: 包括如何快速并优雅地构建UI库的主页、如何托管主页、如何编写脚本提升自己的开发效率、如何生成 CHANGELOG 等, 此文乃第二弹版本, 看过第一弹版本的小伙伴, 想必都知道第一弹版本的组件库文档 UI 是需要自己写的, 最近也是刚研究出来其实 vuepress 也可以作为组件库文档的 UI, 该文档 UI 绝对不输于第一弹版本的
 :::
 <!-- more -->
@@ -23,13 +23,13 @@ date: 2019-08-16 09:30:20
 
 ## 前置工作
 
-以下工作全部基于 Vue CLI 3.x，所以首先要保证机子上有 `@vue/cli` 
+以下工作全部基于 Vue CLI 3.x, 所以首先要保证机子上有 `@vue/cli` 
 
 ``` bash
 vue create vtp-component # vtp-component 作为教学的库名
 ```
 
-`vue-router` , `dart-sass` , `babel` , `eslint` 这些是该项目使用的依赖项，小主可以根据自己的需求进行相应的切换
+`vue-router` , `dart-sass` , `babel` , `eslint` 这些是该项目使用的依赖项, 小主可以根据自己的需求进行相应的切换
 
 ## start
 
@@ -364,7 +364,7 @@ Vue.use(VtpButton)
 
 ### 创建组件和组件文档生成脚本
 
-在 `scripts` 中创建以下几个文件，其中 `create-comp.js` 是用来生成自定义组件目录和自定义组件说明文档脚本， `delete-comp.js` 是用来删除无用的组件目录和自定义组件说明文档脚本， `template.js` 是生成代码的模板文件
+在 `scripts` 中创建以下几个文件, 其中 `create-comp.js` 是用来生成自定义组件目录和自定义组件说明文档脚本,  `delete-comp.js` 是用来删除无用的组件目录和自定义组件说明文档脚本,  `template.js` 是生成代码的模板文件
 
 ``` text
 |-- create-comp.js
@@ -374,7 +374,7 @@ Vue.use(VtpButton)
 |-- template.js
 ```
 
-相关的代码如下，小主可以根据自己的需求进行相应的简单修改，下面的代码参考来源 [vue-cli3 项目优化之通过 node 自动生成组件模板 generate View、Component](https://juejin.im/post/5c6772ff518825629c56943c), 当然也是第一弹中的代码改进
+相关的代码如下, 小主可以根据自己的需求进行相应的简单修改, 下面的代码参考来源 [vue-cli3 项目优化之通过 node 自动生成组件模板 generate View、Component](https://juejin.im/post/5c6772ff518825629c56943c), 当然也是第一弹中的代码改进
 
 全局可配置一些变量
 
@@ -441,7 +441,7 @@ process.stdin.on('data', async chunk => {
     if (upperInputname) {
         // 这里生成组件
         if (hasComponentDirectory) {
-            errorLog( `${upperInputname}组件目录已存在，请重新输入` )
+            errorLog( `${upperInputname}组件目录已存在, 请重新输入` )
             return
         } else {
             log( `生成 component 目录 ${componentDirectory}` )
@@ -637,7 +637,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 
         return `# ${compoenntName}
 
-::: tip 组件作用说明
+::: tip
 ${compoenntName}
 ::: 
 
@@ -697,7 +697,7 @@ export default {
 }
 ```
 
-在 `build` 中创建以下几个文件，其中 `build-entry.js` 脚本是用来生成自定义组件导出 `packages/index.js` ， `get-components.js` 脚本是用来获取 `packages` 目录下的所有组件
+在 `build` 中创建以下几个文件, 其中 `build-entry.js` 脚本是用来生成自定义组件导出 `packages/index.js` ,  `get-components.js` 脚本是用来获取 `packages` 目录下的所有组件
 
 ``` text
 |-- build-entry.js
@@ -705,7 +705,7 @@ export default {
 |-- get-components.js
 ```
 
-相关的代码如下，小主可以根据自己的需求进行相应的简单修改，下面的代码参考来源 [vue-cards](https://github.com/Eamonnzhang/vue-cards)
+相关的代码如下, 小主可以根据自己的需求进行相应的简单修改, 下面的代码参考来源 [vue-cards](https://github.com/Eamonnzhang/vue-cards)
 
 `build-entry.js` 
 
@@ -824,7 +824,7 @@ module.exports = function() {
 
 ### 生成命令
 
-在 `package.json` 中添加以下内容，使用命令 `yarn new:comp` 创建组件目录及其文档或者使用命令 `yarn del:comp` 即可删除组件目录及其文档
+在 `package.json` 中添加以下内容, 使用命令 `yarn new:comp` 创建组件目录及其文档或者使用命令 `yarn del:comp` 即可删除组件目录及其文档
 
 ``` json
 {
@@ -837,7 +837,7 @@ module.exports = function() {
 
 # changelog
 
-在 `package.json` 中修改 script 字段，接下来你懂的，另一篇博客有介绍哦，小主可以执行搜索
+在 `package.json` 中修改 script 字段, 接下来你懂的, 另一篇博客有介绍哦, 小主可以执行搜索
 
 ``` json
 {

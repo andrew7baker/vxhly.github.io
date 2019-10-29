@@ -6,14 +6,14 @@ tags: [Node.js]
 date: 2016-08-30 17:08:18
 ---
 
-::: tip
+::: tip 前言
 package.json 是 Node.js 应用中比较重要的部分, 它定义了项目的依赖关系, 这里将介绍该文件各个配置项的作用
 :::
 <!-- more -->
 
 ## 创建 package.json 文件
 
-::: tip
+::: tip 提示
 安装包的信息可保持到项目的 `package.json` 文件中, 以便后续的其它的项目开发或者他人合作使用, 也说 `package.json` 在项目中是必不可少的。
 :::
 
@@ -45,7 +45,7 @@ npm init
 
 ### name
 
-::: tip
+::: tip 作用
 在 `package.json` 中最重要的就是 `name` 和 `version` 字段。他们都是必须的, 如果没有就无法 `install` 。 `name` 和 `version` 一起组成的标识在假设中是唯一的。改变包应该同时改变 `version` 。<br>
 name 是这个东西的名字。注意: 
 :::
@@ -57,7 +57,7 @@ name 是这个东西的名字。注意:
 
 ### version
 
-::: tip
+::: tip 作用
 在 `package.json` 中最重要的就是 `name` 和 `version` 字段。他们都是必须的, 如果没有就无法 `install` 。 `name` 和 `version` 一起组成的标识在假设中是唯一的。改变包应该同时改变 `version` 。<br>
 `version` 必须能被 `node-semver` 解析, 它被包在 `npm` 的依赖中。（要自己用可以执行 `npm install semver` ）
 :::
@@ -95,7 +95,7 @@ name 是这个东西的名字。注意:
 
 ### license
 
-::: tip
+::: tip 作用
 你应该要指定一个许可证, 让人知道使用的权利和限制的。<br>
 最简单的方法是, 假如你用一个像 `BSD` 或者 `MIT` 这样通用的许可证, 就只需要指定一个许可证的名字, 像这样: 
 :::
@@ -270,7 +270,7 @@ name 是这个东西的名字。注意:
 
 ### repository
 
-::: tip
+::: tip 作用
 指定你的代码存放的地方。这个对希望贡献的人有帮助。如果 git 仓库在 github 上, 那么 npm docs 命令能找到你。
 :::
 
@@ -314,7 +314,7 @@ name 是这个东西的名字。注意:
 
 ### dependencies
 
-::: tip
+::: tip 作用
 依赖是给一组包名指定版本范围的一个 `hash` 。这个版本范围是一个由一个或多个空格分隔的字符串。依赖还可以用 `tarball` 或者 `git URL` 。<br>
 请不要将测试或过渡性的依赖放在 `dependencieshash` 中。见下文的 `devDependencies` 。<br>
 详见 [semver](//npmjs.org/doc/misc/semver.html)
@@ -356,7 +356,7 @@ name 是这个东西的名字。注意:
 
 ### 依赖 URL
 
-::: tip
+::: tip 提示
 可以指定一个 `tarball URL` , 这个 `tarball` 将在包被初始化的时候下载并初始化。
 :::
 
@@ -388,7 +388,7 @@ name 是这个东西的名字。注意:
 
 ### devDependencies
 
-::: tip
+::: tip 作用
 如果有人要使用你的模块, 那么他们可能不需要你开发使用的外部测试或者文档框架。<br>
 在这种情况下, 最好将这些附属的项目列在 `devDependencies` 中。
 :::
@@ -418,7 +418,7 @@ name 是这个东西的名字。注意:
 
 ### peerDependencies
 
-::: tip
+::: tip 作用
 在一些场景中, 如在一个 `host` 中不必须进行 `require` 时候, 你想表现你的 `package` 与一个 `host` 工具或者库的兼容关键。这一般用来引用插件。尤其是你的模块可能要暴露一个特定的接口, 并由 `host` 文档来预期和指定。
 :::
 
@@ -442,7 +442,7 @@ name 是这个东西的名字。注意:
 
 ### bundledDependencies
 
-::: tip
+::: tip 作用
 一组包名, 他们会在发布的时候被打包进去。<br>
 拼成 `"bundleDependencies"` （缺 d）也可以: `optionalDependencies` 。
 ::: 
@@ -483,7 +483,7 @@ if (foo) {
 }
 ```
 
-::: tip
+::: tip 作用
 像 `dependensies` 一样, 如果你不指定版本或者指定 `"*"` 作为版本, 那么所有版本的 `node` 都可以。
 :::
 
@@ -559,7 +559,7 @@ if (foo) {
 
 ### publishConfig
 
-::: tip
+::: tip 作用
 这是一个在 `publish-time` 使用的配置集合。当你想设置 `tag` 或者 `registry` 的时候它非常有用, 所以你可以确定一个给定的包没有打上 `"lastest"` 的 `tag` 或者被默认发布到全局的公开 `registry` 。
 :::
 

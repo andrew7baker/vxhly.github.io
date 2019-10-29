@@ -6,7 +6,7 @@ tags: [JavaScript, Pentest]
 date: 2016-08-15 21:58:30
 ---
 
-::: tip
+::: tip 前言
 BOM (Browser Object Model) 是指浏览器对象模型, 是用于描述这种对象与对象之间层次关系的模型 
 :::
 <!-- more -->

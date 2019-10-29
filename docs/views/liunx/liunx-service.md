@@ -6,7 +6,7 @@ tags: [Liunx, Service, Security]
 date: 2016-09-15 18:59:15
 ---
 
-::: tip
+::: tip 前言
 Liunx 的学习笔记已经推出有一段时间了, 现继续推出在 Liunx 中 SAMBA 服务、SSH 服务、FTP 服务、APACHE 服务、DNS 服务的安全配置。本文就先介绍这几个服务的相关内容
 :::
 <!-- more -->
@@ -229,7 +229,7 @@ man 5 sshd_config
 
 ### 服务的启动与停止
 
-::: tip
+::: tip 提示
 SSh 的服务名并不叫做 `ssh` , 而是 `sshd` 。
 :::
 
@@ -249,7 +249,7 @@ chkconfig --level 35 sshd on   # 设置开机自启
 
 ## FTP 服务
 
-::: tip
+::: tip 提示
 确切的说, 应该叫它 vsFTP。vsFTP 是一个基于 GPL 发布的类 Unix 系统上使用的 FTP 服务器软件, 它的全称是 `Very Secure FTP` 
 :::
 
@@ -372,7 +372,7 @@ man 5 vsftpd.conf
 
 ### 服务的启动与停止
 
-::: tip
+::: tip 提示
 FTP 的服务名并不叫做 `vsftp` , 而是 `vsftpd` 。
 :::
 
@@ -458,7 +458,7 @@ man 5 httpd.conf
 
 ### 服务的启动与停止
 
-::: tip
+::: tip 提示
 APACHE 的服务名并不叫做 `http` , 而是 `httpd` 。
 :::
 
@@ -478,7 +478,7 @@ chkconfig --level 35 httpd on   # 设置开机自启
 
 ## DNS 服务
 
-::: tip
+::: tip 提示
 DNS（Domain Name Server, 域名服务器）是进行域名(domain name)和与之相对应的 IP 地址 (IP address) 转换的服务器。
 :::
 
@@ -536,7 +536,7 @@ man 5 named-caching-nameserver.conf
 
 ### 服务的启动与停止
 
-::: tip
+::: tip 提示
 DNS 的服务名并不叫做 `name` , 而是 `named` 。
 :::
 

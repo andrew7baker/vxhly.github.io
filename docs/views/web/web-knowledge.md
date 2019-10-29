@@ -6,7 +6,7 @@ tags: [WEB, HTML5, JavaScript, CSS, jQuery]
 date: 2018-01-07 14:36:27
 ---
 
-::: tip
+::: tip 前言
 WEB 技术基础知识点（包含: HTML、CSS、JavaScript 三大块知点点集合）
 :::
 <!-- more -->
@@ -26,7 +26,7 @@ WEB 技术基础知识点（包含: HTML、CSS、JavaScript 三大块知点点�
 * `src` => 资源文件地址
 * `alt` => 资源文件未找到时, 显示的文本信息
 
-::: tip
+::: tip 提示
 常见图片文件格式: GIF、JPEG、PNG、JPG、BMP<br>
 大小比较: 通常地, PNG ≈ JPG > GIF；透明性: PNG > GIF > JPG；色彩丰富程度: JPG > PNG >GIF；兼容程度: GIF ≈ JPG > PNG；(JPEG、BMP 使用的比肩少, 这里不做比较
 :::
@@ -384,7 +384,7 @@ class => 可以有多个, 使用 `.[className]` 表示 id => 只能写一个, �
 </style>
 ```
 
-::: tip
+::: tip 提示
 其优先级 => 内联样式表 > 内部样式表 > 外部样式表
 :::
 
@@ -429,7 +429,7 @@ html {
 
 ### 定义变量
 
-::: tip
+::: tip 提示
 不得以数字开头, 可以是 数字, 字母, _, $ 的组合, 不能是关键字
 :::
 
@@ -552,8 +552,8 @@ setInterval("alert('5 seconds!')", 5000);
 * `var arr = [1, '1', true]` 
 * `var arr = new Array(1, '1', true)` 
 
-::: warning
-注意: `typeof new Array(1, '1', true)` 返回的是 object
+::: warning 注意
+`typeof new Array(1, '1', true)` 返回的是 object
 :::
 
 #### 常用属性和方法
@@ -594,8 +594,8 @@ setInterval("alert('5 seconds!')", 5000);
 * `var str = String("String")` 
 * `var str = new String("String")` 
 
-::: warning
-注意: `typeof String("String")` 返回的是 string, 而 `typeof new String("String")` 返回的是 object
+::: warning 注意
+`typeof String("String")` 返回的是 string, 而 `typeof new String("String")` 返回的是 object
 :::
 
 #### 常用属性和方法

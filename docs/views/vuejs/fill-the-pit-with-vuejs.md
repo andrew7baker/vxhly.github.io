@@ -6,7 +6,7 @@ tags: [Vue.js, Node.js]
 date: 2017-09-11 16:55:20
 ---
 
-::: tip
+::: tip 前言
 记录一些使用 vue-cli 脚手架创建项目时, 遇到的一些问题以及解决方案
 :::
 <!-- more -->
@@ -742,7 +742,7 @@ module.exports = {
 
 ## 基于 Markdown 的幻灯片
 
-导入 `text-loader` 上一节已经说明过了，这里就不重复了
+导入 `text-loader` 上一节已经说明过了, 这里就不重复了
 
 > [github vue-mark-display](https://github.com/Jinjiang/vue-mark-display)
 

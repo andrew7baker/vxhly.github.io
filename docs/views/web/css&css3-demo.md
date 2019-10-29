@@ -6,7 +6,7 @@ tags: [Code, CSS]
 date: 2019-08-06 17:03:51
 ---
 
-::: tip
+::: tip 前言
 收集 css3 实用样式表, 内包含 less 和 sass 实用工具, 更多的例子可以前往 [CSS Tricks](https://qishaoxuan.github.io/css_tricks/)
 :::
 <!-- more -->

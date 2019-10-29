@@ -3,29 +3,13 @@
   color: #fff;
 }
 
-html,
-body {
-  scroll-behavior: smooth;
-}
-
-div[class~="language-text"]:before {
-  content: "text";
-}
-
-div[class~="language-yml"]:before {
-  content: "yml";
-}
-
-div[class*="language-"] pre {
-  user-select: text;
-}
+// html,
+// body {
+//   scroll-behavior: smooth;
+// }
 
 p {
   margin: 1em auto;
-}
-
-p code {
-  user-select: all;
 }
 
 .page > div {
@@ -58,4 +42,13 @@ h6 + ol {
 .comments-wrapper {
   max-width: 1024px !important;
   width: 1024px !important;
+}
+
+div[class*="language-"] .highlight-lines .highlighted {
+  background-color: rgba(34, 151, 155, 0.5) !important;
+  color: #fff;
+  &:before {
+    background-color: rgba(34, 151, 155, 0.5) !important;
+    color: #fff;
+  }
 }

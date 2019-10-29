@@ -6,7 +6,7 @@ tags: [Liunx, Security]
 date: 2016-10-27 10:00:55
 ---
 
-::: tip
+::: tip 前言
 本系列笔记又是 Liunx 学习系列教程的一大步, 本系列学习笔记记录 RedHat 系统的安全加固。本篇笔记记录 RedHat 下的防火请的开启和关闭, 还有允许哪些端口通过防火墙
 :::
 <!-- more -->
@@ -135,7 +135,7 @@ iptables -A FORWARD -j REJECT
 # 禁止其他未允许的规则访问
 ```
 
-::: tip
+::: tip 提示
 `-A` 是在 `iptables` 的最后添加一条规则, `-I` 是在 `iptables` 的前面添加一条规则
 :::
 

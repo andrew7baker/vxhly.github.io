@@ -28,3 +28,19 @@ div[class*="language-"] pre,
 div[class*="language-"] pre[class*="language-"] {
   position: static !important;
 }
+
+div[class~="language-text"]:before {
+  content: "text";
+}
+
+div[class~="language-yml"]:before {
+  content: "yml";
+}
+
+div[class*="language-"] pre {
+  user-select: text;
+}
+
+p code {
+  user-select: all;
+}

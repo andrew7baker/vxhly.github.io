@@ -6,20 +6,20 @@ tags: [Node.js, Liunx]
 date: 2016-08-26 15:30:10
 ---
 
-::: tip
+::: tip 前言
 主要介绍 npm 中的各个选项的作用以及其区别。npm 依赖于 Node.js, 童鞋们要注意你的系统是否有 Node.js 环境
 :::
 <!-- more -->
 
 ## npm 是什么
 
-::: tip
+::: tip 简介
 NPM 的全称是 Node Package Manager, 是随同 Node.js 一起安装的包管理和分发工具, 它很方便让 JavaScript 开发者下载、安装、上传以及管理已经安装的包。
 :::
 
 ## npm install 安装模块
 
-::: tip
+::: tip 提示
 安装包, 默认会安装最新的版本, 最后所有的依赖会存放在 `node_modules` 目录下的, 如: 
 ::: 
 
@@ -29,7 +29,7 @@ $ npm install gulp
 
 ### 全局安装
 
-::: tip
+::: tip 提示
 只需加上 `-g` 或者 `--global` 参数, 就可以实现全局安装, 如: 
 :::
 
@@ -54,7 +54,7 @@ $ npm install [module-name] -S
 
 ### 作用
 
-::: tip
+::: tip 作用
 自动把模块和版本号添加至 `package.json` 的 `dependencies` （生产阶段的依赖）部分, 避免了手动添加。
 ::: 
 
@@ -77,7 +77,7 @@ $ npm install [module-name] -D
 
 ### 作用
 
-::: tip
+::: tip 作用
 自动把模块和版本号添加至 `package.json` 的 `devDependencies` （开发阶段的依赖）部分, 避免了手动添加。
 ::: 
 
@@ -100,7 +100,7 @@ $ npm install [module-name] -O
 
 ### 作用
 
-::: tip
+::: tip 作用
 自动把模块和版本号添加至 `package.json` 的 `optionalDependencies` （可选阶段的依赖）部分, 避免了手动添加。
 ::: 
 
@@ -123,7 +123,7 @@ $ npm install [module-name] -E
 
 ### 作用
 
-::: tip
+::: tip 作用
 自动把模块和版本号添加至 `package.json` 的 `dependencies` （精确安装指定模块版本）部分, 避免了手动添加。需要注意的是: `package.json` 文件的 `dependencies` 字段, 版本号中的 `^` 消失了
 :::
 
@@ -139,7 +139,7 @@ $ npm install [module-name] -E
 
 ## 创建 package.json 文件
 
-::: tip
+::: tip 提示
 安装包的信息可保持到项目的 `package.json` 文件中, 以便后续的其它的项目开发或者他人合作使用, 也说 `package.json` 在项目中是必不可少的。
 :::
 
@@ -149,7 +149,7 @@ $ npm init
 
 ### 安装模块
 
-::: tip
+::: tip 提示
 模块的依赖都被写入了 `package.json` 文件后, 他人打开项目的根目录（项目开源、内部团队合作）, 时, 只需一条命令就可以安装 `package.json` 中的依赖。
 :::
 
@@ -157,7 +157,7 @@ $ npm init
 $ npm install
 ```
 
-::: tip
+::: tip 提示
 加上 `--save` 会安装 `package.json` 中 `dependencies` 里的所有模块。
 :::
 
@@ -173,7 +173,7 @@ $ npm install --save
 $ npm uninstall [module-name]
 ```
 
-::: tip
+::: tip 提示
 以上写法并不会改变 `package.json` 文件, 使用 `-S | --save | -D | --save-dev | -O | --save-optional` 选项即可删除 `package.json` 文件中的依赖。<br>
 如使用 `--save` 选项, 将会删除 `package.json` 文件 `dependencies` 中的该模块名和版本号。
 ::: 
@@ -184,7 +184,7 @@ $ npm uninstall [module-name] --save
 
 ### 更新模块
 
-::: tip
+::: tip 提示
 从服务器下载最新版本的模块。需要注意的是, 最新版本的模块并不是最稳定的, 模块还是选择相对稳定的版本较好。支持 `-g` 选项。
 :::
 
@@ -194,7 +194,7 @@ $ npm update [-g] [module-name]
 
 ### 检查模块是否已经过时
 
-::: tip
+::: tip 提示
 此命令会列出所有已经过时的包, 可以及时进行包的更新.
 :::
 
@@ -208,7 +208,7 @@ $ npm outdated
 npm start [-- <args>]
 ```
 
-::: tip
+::: tip 提示
 该命令写在 `package.json` 文件 `scripts` 的 `start` 字段中, 可以自定义命令来配置一个服务器环境和安装一系列的必要程序, 如:
 :::
 
@@ -218,7 +218,7 @@ npm start [-- <args>]
 }
 ```
 
-::: tip
+::: tip 提示
 如果 `package.json` 文件没有设置 `start` , 则将直接启动 `node server.js` 
 :::
 
@@ -269,7 +269,7 @@ All dependencies match the latest package versions :)
 
 ### 查看包的安装路径
 
-::: tip
+::: tip 提示
 输出 node_modules 的路径, 支持 `-g` 选项。
 :::
 
@@ -279,7 +279,7 @@ $ npm root [-g]
 
 ### 管理 npm 的配置路径
 
-::: tip
+::: tip 提示
 对于 config 这块用得最多应该是设置代理, 解决 npm 安装一些模块失败的问题
 :::
 

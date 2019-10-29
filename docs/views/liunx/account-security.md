@@ -6,7 +6,7 @@ tags: [Liunx, Security, Pentest]
 date: 2016-10-14 11:06:38
 ---
 
-::: tip
+::: tip 提示
 本系列笔记又是 Liunx 学习系列教程的一大步, 本系列学习笔记记录 RedHat 系统的安全加固。 本篇主要介绍相关于帐号安全的加固策略, 加强系统的防御能力 
 :::
 <!-- more -->
@@ -26,8 +26,8 @@ PASS_MIN_LEN 5# 密码最小长度
 PASS_WARN_AGE 7# 在密码过期之前警告的天数
 ```
 
-::: warning
-注意:  以上只对之后新增的用户有效, 如果要修改已存在的用户密码规则, 需要使用 `chage` 命令
+::: warning 注意
+以上只对之后新增的用户有效, 如果要修改已存在的用户密码规则, 需要使用 `chage` 命令
 :::
 
 使用以下命令, 可以查看用户的密码规则, `Command Format:` 
@@ -48,8 +48,8 @@ chage -l [userName]
 chage -M 90 -m 6 -W 30 [userName]
 ```
 
-::: warning
-注意:  不要用该命令给 root 用户加上有效期, 如果密码过期, 再加上后文说的 `/etc/shadow` 文件加锁禁止修改, 会导致 root 提示修改密码, 无法成功修改密码, 从而无法登陆。
+::: warning 注意
+不要用该命令给 root 用户加上有效期, 如果密码过期, 再加上后文说的 `/etc/shadow` 文件加锁禁止修改, 会导致 root 提示修改密码, 无法成功修改密码, 从而无法登陆。
 ::: 
 
 `chage` 选项解释
@@ -96,7 +96,7 @@ awk -F ':' '($2=="！ ！ "){print $1}' /etc/shadow
 awk -F ':' '($3==0){print $1}' /etc/passwd
 ```
 
-::: tip
+::: tip 提示
 UID 为 0 的任何用户都拥有系统的最高特权, 保证只有 root 用户的 UID 为 0
 :::
 
@@ -138,8 +138,8 @@ password sufficient pam_unix.so md5 shadow nullok try_first_pass use_authtok rem
 * **`ocredit=N`** => 密码中至少 `(N<0)` 或至多 `(N>=0)` 有几个特殊字符
 * **`difok=M`** => 新密码与前一个旧密码之间至少有 M 个字符不相同
 
-::: warning
-注意: `dcredit` 、 `ucredit` 、 `lcredit` 、 `ocredit` 为信用度字符, 如果 `N<0` , 表示至少, 则新密码长度最小长度就等于 minlen.。 而当 `N>0` 时, 表示至多, 比如 `ocredit=1` , 至多有一个特殊字符, 这样的话, 即使没有特殊字符也会允许设置新密码。 还有, 此时新密码长度会大于 minlen。 算法交复杂, 这里不赘述。 因此, 通常情况下推荐使用 `N<0` 来做密码复杂度限制。 另外, 此密码规则对 root 用户无效, 只针对普通用户修改自身密码
+::: warning 注意
+`dcredit` 、 `ucredit` 、 `lcredit` 、 `ocredit` 为信用度字符, 如果 `N<0` , 表示至少, 则新密码长度最小长度就等于 minlen.。 而当 `N>0` 时, 表示至多, 比如 `ocredit=1` , 至多有一个特殊字符, 这样的话, 即使没有特殊字符也会允许设置新密码。 还有, 此时新密码长度会大于 minlen。 算法交复杂, 这里不赘述。 因此, 通常情况下推荐使用 `N<0` 来做密码复杂度限制。 另外, 此密码规则对 root 用户无效, 只针对普通用户修改自身密码
 :::
 
 ## 登录验证规则
@@ -152,8 +152,8 @@ password sufficient pam_unix.so md5 shadow nullok try_first_pass use_authtok rem
 auth required pam_tally2.so deny = 3 unlock_time = 300
 ```
 
-::: warning
-注意:  一定要加在 `#%PAM-1.0` 下面一行
+::: warning 注意
+一定要加在 `#%PAM-1.0` 下面一行
 :::
 
 参数说明
@@ -164,15 +164,15 @@ auth required pam_tally2.so deny = 3 unlock_time = 300
 * **`root_unlock_time[=n]`** => 设定 root 用户锁定后, 多少时间后解锁, 单位是秒
 * **`quiet`** => 不对已锁定的用户发出提示信息
 
-::: warning
-注意:  以上参数根据实际需要取舍, 如果使用了 even_deny_root 参数限制 root 用户登录错误次数, 而没有配置 root_unlock_time 的话, 一旦 root 用户被锁, 解锁将很麻烦。
+::: warning 注意
+以上参数根据实际需要取舍, 如果使用了 even_deny_root 参数限制 root 用户登录错误次数, 而没有配置 root_unlock_time 的话, 一旦 root 用户被锁, 解锁将很麻烦。
 :::
 
 ### 查看用户登录失败次数
 
 当登录错误次数达到最大限制后, 用户再次登录时, 会提示
 
-``` 
+``` text
 Your account is locked.Maximum amount of failed attempts was reached.
 ```
 
@@ -220,19 +220,19 @@ pam_tally2 -u [userName]
 
 ### 禁止 root 用户远程 ssh 登录
 
-::: tip
+::: tip 提示
 由于之前的笔记已经记录过了, 这里就不再重复了
 :::
 
 ### ssh 的黑白名单（指定用户或组）
 
-::: tip
+::: tip 提示
 由于之前的笔记已经记录过了, 这里就不再重复了
 :::
 
 ### ssh 的黑白名单（指定 IP）
 
-::: tip
+::: tip 提示
 由于之前的笔记已经记录过了, 这里就不再重复了
 :::
 
@@ -240,7 +240,7 @@ pam_tally2 -u [userName]
 
 ### 禁止 root 用户远程 telnet 登录
 
-::: tip
+::: tip 提示
 系统安装 `telnet-server` 服务后, 默认就是禁止 root 用户直接远程 telnet 登录的。 确认只要存在 `/etc/securetty` 文件, 就可以限制 root 直接远程 telnet 登录。
 :::
 
@@ -289,8 +289,8 @@ auth required pam_wheel.so group = wheel
 usermod -G wheel [username]
 ```
 
-::: warning
-注意, 如果禁止 root 用户直接登录, 也不存在 wheel 组的用户, 就无法进入 root 用户了
+::: warning 注意
+如果禁止 root 用户直接登录, 也不存在 wheel 组的用户, 就无法进入 root 用户了
 :::
 
 ![RedHat 系统安全加固](http://oss-blog.test.upcdn.net/redhat-reinforce-11.png)

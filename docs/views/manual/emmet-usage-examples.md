@@ -6,7 +6,7 @@ tags: [HTML5, CSS]
 date: 2016-08-04 13:20:34
 ---
 
-::: tip
+::: tip 前言
 Emmet 的前身是大名鼎鼎的 Zen coding。如果你从事 Web 前端开发的话, 对该插件一定不会陌生。它使用仿 CSS 选择器的语法来代码, 大大提高了 HTML/CSS 代码编写的速度
 :::
 <!-- more -->

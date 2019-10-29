@@ -6,7 +6,7 @@ tags: [Node.js, Liunx]
 date: 2017-06-02 14:53:49
 ---
 
-::: tip
+::: tip 前言
 Ghost 采用 Node.js 编写, 默认使用 SQLite3 数据库, 非常轻量, 因为是文件型数据库, 所以无需安装。Ghost 允许多用户编写博文, 使用 Markdown 来编写博文
 :::
 <!-- more -->
@@ -66,7 +66,7 @@ apt-get install nginx
 
 官方文档建议使用 Nginx 作为 Ghost 的前端来转发 80 端口请求, 那么 Ghost 的工作总流程就可以描述为: 
 
-::: tip
+::: tip 提示
 Nginx 监听 80 端口, Ghost 一直监听本地 127.0.0.1:2368 端口, 你从外网访问 www.xxx.com 时, Nginx 从 80 端口接收请求, 将之转发到本地 127.0.0.1:2368 端口, 然后 Ghost 就收到访问请求了。
 :::
 

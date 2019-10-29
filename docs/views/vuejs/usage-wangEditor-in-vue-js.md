@@ -6,7 +6,7 @@ tags: [Node.js, JavaScript]
 date: 2018-06-13 08:37:16
 ---
 
-::: tip
+::: tip 前言
 富文本编辑器在后台管理系统中是一个常见而又简单的需求, 这里介绍到的是在 vue.js 项目中使用 wangEditor 这一款富文本编辑器
 :::
 <!-- more -->

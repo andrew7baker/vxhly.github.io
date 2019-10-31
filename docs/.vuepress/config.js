@@ -50,13 +50,13 @@ module.exports = {
   "theme": "reco",
   "themeConfig": {
     "themePicker": false,
-    "vssueConfig": {
-      "platform": "github",
-      "owner": "vxhly",
-      "repo": "blog-comments",
-      "clientId": "e5723fcb7bd57d3700f4",
-      "clientSecret": "55e07b73fdff6320851973f9c8f31e54298c95c4",
-    },
+    // "vssueConfig": {
+    //   "platform": "github",
+    //   "owner": "vxhly",
+    //   "repo": "blog-comments",
+    //   "clientId": "e5723fcb7bd57d3700f4",
+    //   "clientSecret": "55e07b73fdff6320851973f9c8f31e54298c95c4",
+    // },
     "valineConfig": {
       "appId": "bplAa0Fmk0scSFweIQkW1zlG-gzGzoHsz",
       "appKey": "kOFtniD34zTlLvSdftu62aKu",
@@ -177,37 +177,37 @@ module.exports = {
       "disabled": false,
       "noSelect": true
     }],
-    [
-      "@vuepress-reco/vuepress-plugin-kan-ban-niang", {
-        "theme": ["shizuku"],
-        "messages": {
-          "home": "准备好回家了吗？要起航了!",
-          "close": "讨厌啦！真的要离开我吗？"
-        },
-        "messageStyle": {
-          "position": "fixed",
-          "right": "125px",
-          "bottom": "235px",
-          "opacity": "0.75",
-          "height": "max-content",
-          "width": "200px",
-          "fon-szie": "16px"
-        },
-        "modelStyle": {
-          "position": "fixed",
-          "right": "90px",
-          "bottom": "-20px",
-          "opacity": "1"
-        },
-        "width": 216,
-        "height": 281.6
-      }
-    ],
+    // [
+    //   "@vuepress-reco/vuepress-plugin-kan-ban-niang", {
+    //     "theme": ["shizuku"],
+    //     "messages": {
+    //       "home": "准备好回家了吗？要起航了!",
+    //       "close": "讨厌啦！真的要离开我吗？"
+    //     },
+    //     "messageStyle": {
+    //       "position": "fixed",
+    //       "right": "125px",
+    //       "bottom": "235px",
+    //       "opacity": "0.75",
+    //       "height": "max-content",
+    //       "width": "200px",
+    //       "fon-szie": "16px"
+    //     },
+    //     "modelStyle": {
+    //       "position": "fixed",
+    //       "right": "90px",
+    //       "bottom": "-20px",
+    //       "opacity": "1"
+    //     },
+    //     "width": 216,
+    //     "height": 281.6
+    //   }
+    // ],
     ["sitemap", {
       "hostname": "https://vxhly.github.io",
       "exclude": ['/404.html'],
-      "dateFormatter": time => {
-        return time
+      "dateFormatter": val => {
+        return new Date().toISOString()
       }
     }]
     // require("./plugins/kesshouban/index")

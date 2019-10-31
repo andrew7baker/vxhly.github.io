@@ -4,62 +4,52 @@
       :sidebar="false"
       :isComment="false"
     >
-      <a-spin
-        :spinning="loading"
-        tip="Loading..."
-      >
-        <div class="project">
-          <a-row
-            :gutter="20"
-            type="flex"
-            align="middle"
-            justify="center"
+      <section class="project">
+        <h1 class="project-title">My Project</h1>
+        <h4 class="project-subtitle">如果你觉得下面的项目给你带来了帮助，别忘了给个 start 吧！</h4>
+        <section
+          class="project-loading"
+          v-if="loading"
+        >
+          <img src="./loading.svg">
+          <span>Loading...</span>
+        </section>
+        <section
+          class="project-container"
+          v-else
+        >
+          <article
+            v-for="(item, index) in projects"
+            :key="index"
           >
-            <a-col
-              v-for="(item, index) in projects"
-              :key="index"
-            >
-              <project-item :options="item"></project-item>
-            </a-col>
-          </a-row>
-        </div>
-      </a-spin>
+            <project-item :options="item"></project-item>
+          </article>
+        </section>
+      </section>
     </Common>
   </div>
 </template>
 
 <script>
   import Common from "@theme/components/Common.vue";
-  import { Row, Col, Spin } from "ant-design-vue";
-  import "ant-design-vue/lib/row/style/css";
-  import "ant-design-vue/lib/col/style/css";
-  import "ant-design-vue/lib/spin/style/css";
   import { httpGet } from "./utils/fetch.js";
   import ProjectItem from "./ProjectItem";
   import { filter, orderBy } from "lodash";
-
   export default {
     name: "Projects",
-
     components: {
       Common,
-      ProjectItem,
-      "a-row": Row,
-      "a-col": Col,
-      "a-spin": Spin
+      ProjectItem
     },
-
     data() {
       return {
         projects: [],
         loading: true
       };
     },
-
     mounted() {
       this.getProjects();
     },
-
     methods: {
       getProjects() {
         this.loading = true;
@@ -67,7 +57,6 @@
           this.loading = false;
           // 过滤掉私有的项目，过滤掉 fork 项目
           const projects = filter(res, item => !item.private && !item.fork);
-
           this.projects = orderBy(
             projects,
             ["stargazers_count", "forks_count", "name", "created_at"],
@@ -83,9 +72,27 @@
   .project {
     max-width: 1024px;
     min-height: 300px;
-    margin: 0 auto;
-    top: 3.6rem;
-    position: relative;
     margin: 4rem auto;
+    margin-top: 6rem;
+  }
+  .project-title,
+  .project-subtitle {
+    text-align: center;
+  }
+  .project-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .project-loading img {
+    position: relative;
+  }
+  .project-loading span {
+    position: absolute;
+  }
+  .project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 </style>

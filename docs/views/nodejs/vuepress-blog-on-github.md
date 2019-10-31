@@ -382,6 +382,30 @@ module.exports = {
 }
 ```
 
+### sitemap
+
+::: warning 注意
+如果你的网站希望被搜索引擎搜索到的话，强烈这个插件需要安装
+:::
+
+生成站点地图插件, 先上插件文档 [vuepress-plugin-sitemap](https://github.com/ekoeryanto/vuepress-plugin-sitemap)
+
+再上配置, `/.vuepress/config.js` 
+
+``` javascript
+module.exports = {
+    plugins: [
+        ["sitemap", {
+            "hostname": "https://vxhly.github.io", // 替换成你的 GitHub 地址
+            "exclude": ['/404.html'],
+            "dateFormatter": time => {
+                return time
+            }
+        }]
+    ]
+}
+```
+
 ## 部署上线
 
 ::: tip 提示

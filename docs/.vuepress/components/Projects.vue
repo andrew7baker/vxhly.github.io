@@ -79,7 +79,6 @@
   };
 </script>
 
-
 <style lang="css" scope>
   .project {
     max-width: 1024px;

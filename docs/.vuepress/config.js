@@ -49,23 +49,22 @@ module.exports = {
   ],
   "theme": "reco",
   "themeConfig": {
-    "smoothScroll": true,
     "themePicker": false,
-    // "vssueConfig": {
-    //   "platform": 'github',
-    //   "owner": 'vxhly',
-    //   "repo": 'blog-comments',
-    //   "clientId": 'e5723fcb7bd57d3700f4',
-    //   "clientSecret": '55e07b73fdff6320851973f9c8f31e54298c95c4',
-    // },
-    // "valineConfig": {
-    //   "appId": "bplAa0Fmk0scSFweIQkW1zlG-gzGzoHsz",
-    //   "appKey": "kOFtniD34zTlLvSdftu62aKu",
-    //   "placeholder": "文明发言, 您的支持将是我继续下去的动力...",
-    //   "notify": true,
-    //   "verify": true,
-    //   "visitor": true
-    // },
+    "vssueConfig": {
+      "platform": "github",
+      "owner": "vxhly",
+      "repo": "blog-comments",
+      "clientId": "e5723fcb7bd57d3700f4",
+      "clientSecret": "55e07b73fdff6320851973f9c8f31e54298c95c4",
+    },
+    "valineConfig": {
+      "appId": "bplAa0Fmk0scSFweIQkW1zlG-gzGzoHsz",
+      "appKey": "kOFtniD34zTlLvSdftu62aKu",
+      "placeholder": "文明发言, 您的支持将是我继续下去的动力...",
+      "notify": true,
+      "verify": true,
+      "visitor": true
+    },
     "nav": [{
         "text": "Home",
         "link": "/",
@@ -77,9 +76,9 @@ module.exports = {
         "icon": "iconfont icon-project"
       },
       {
-        "text": 'TimeLine',
-        "link": '/timeLine/',
-        "icon": 'reco-date'
+        "text": "TimeLine",
+        "link": "/timeLine/",
+        "icon": "reco-date"
       },
       {
         "text": "Contact",
@@ -141,13 +140,12 @@ module.exports = {
     "lineNumbers": true
   },
   "plugins": [
-    ['vuepress-plugin-smooth-scroll'],
     [
-      '@vuepress/last-updated',
+      "@vuepress/last-updated",
       {
         transformer: (timestamp, lang) => {
           // 不要忘了安装 moment
-          const moment = require('moment')
+          const moment = require("moment")
           moment.locale(lang)
           return moment(timestamp).fromNow()
         }
@@ -165,7 +163,9 @@ module.exports = {
       "serviceWorker": true,
       "updatePopup": true
     }],
-    require("./plugins/clipboard-copy/clipboard-copy"),
+    ["one-click-copy", {
+      "copy_message": "复制成功了, 快去粘贴使用吧 !!!"
+    }],
     ["nest", {
       "color": "255,0,255",
       "count": 100,
@@ -185,24 +185,31 @@ module.exports = {
           "close": "讨厌啦！真的要离开我吗？"
         },
         "messageStyle": {
-          "position": 'fixed',
-          "right": '125px',
-          "bottom": '235px',
-          "opacity": '0.75',
+          "position": "fixed",
+          "right": "125px",
+          "bottom": "235px",
+          "opacity": "0.75",
           "height": "max-content",
           "width": "200px",
           "fon-szie": "16px"
         },
         "modelStyle": {
-          "position": 'fixed',
-          "right": '90px',
-          "bottom": '-20px',
-          "opacity": '1'
+          "position": "fixed",
+          "right": "90px",
+          "bottom": "-20px",
+          "opacity": "1"
         },
         "width": 216,
         "height": 281.6
       }
-    ]
+    ],
+    ["sitemap", {
+      "hostname": "https://vxhly.github.io",
+      "exclude": ['/404.html'],
+      "dateFormatter": time => {
+        return time
+      }
+    }]
     // require("./plugins/kesshouban/index")
   ]
 }

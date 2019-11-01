@@ -65,7 +65,8 @@ module.exports = {
       "verify": true,
       "visitor": true
     },
-    "nav": [{
+    "nav": [
+      {
         "text": "Home",
         "link": "/",
         "icon": "reco-home"
@@ -186,7 +187,7 @@ module.exports = {
     //     },
     //     "messageStyle": {
     //       "position": "fixed",
-    //       "right": "125px",
+    //       "right": "100px",
     //       "bottom": "235px",
     //       "opacity": "0.75",
     //       "height": "max-content",
@@ -203,7 +204,31 @@ module.exports = {
     //     "height": 281.6
     //   }
     // ],
-    // ["@vuepress-reco/vuepress-plugin-kan-ban-niang"],
+    [require('./plugin/kanbanniang/index.js'), {
+      "theme": ["kesshouban"],
+      "messages": {
+        "welcome": "哦尼桑, 哦尼酱, お帰りなさい !",
+        "home": "准备好回家了吗？要起航了!",
+        "close": "讨厌啦！真的要离开我吗？"
+      },
+      "messageStyle": {
+        "position": "fixed",
+        "right": "75px",
+        "bottom": "235px",
+        "opacity": "0.75",
+        "height": "max-content",
+        "width": "200px",
+        "fon-szie": "16px"
+      },
+      "modelStyle": {
+        "position": "fixed",
+        "right": "90px",
+        "bottom": "-20px",
+        "opacity": "1"
+      },
+      "width": 216,
+      "height": 281.6
+    }],
     ["sitemap", {
       "hostname": "https://vxhly.github.io",
       "exclude": ['/404.html'],

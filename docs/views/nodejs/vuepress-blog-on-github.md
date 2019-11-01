@@ -470,8 +470,9 @@ branches:
 
 ### 自动化部署
 
-::: warning 注意
-非常重要： 需要想你的仓库中正确提交你的  package-lock.json，否则 Travis CI 在执行 `npm ci` 时可能会发生错误
+::: warning 非常重要
+需要想你的仓库中正确提交你的  package-lock.json，否则 Travis CI 在执行 `npm ci` 时可能会发生错误<br>
+当然如果你并不想这么做的的话，可以将 `npm ci` 替换成 `npm install`
 :::
 
 首先进入 [travis-ci 官网](https://travis-ci.org/), 将对应的项目启用 Travis CI

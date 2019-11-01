@@ -209,7 +209,18 @@ module.exports = {
       "dateFormatter": val => {
         return new Date().toISOString()
       }
+    }],
+    [require("./plugins/reward/index"), {
+      'rewardOption': [
+        {
+          'text': '微信',
+          'url': '/WeChat.png'
+        },
+        {
+          'text': '支付宝',
+          'url': '/Alipay.png'
+        }
+      ]
     }]
-    // require("./plugins/kesshouban/index")
   ]
 }

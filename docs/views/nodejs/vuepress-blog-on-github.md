@@ -470,6 +470,10 @@ branches:
 
 ### 自动化部署
 
+::: warning 注意
+非常重要： 需要想你的仓库中正确提交你的  package-lock.json，否则 Travis CI 在执行 `npm ci` 时可能会发生错误
+:::
+
 首先进入 [travis-ci 官网](https://travis-ci.org/), 将对应的项目启用 Travis CI
 
 ![vuepress-blog](http://oss-blog.test.upcdn.net/vuepress-blog-1.png)
@@ -507,4 +511,24 @@ npm run deploy
 :::
 
 ![vuepress-blog](http://oss-blog.test.upcdn.net/vuepress-blog-6.png)
+
+### 拓展阅读
+
+NPM 5.7.0 引入了一种新的安装依赖的方式：
+
+``` bash
+npm ci
+```
+
+它是从 `package-lock.json` 文件安装依赖， 具有快以及可靠优点，关于速度的比较引用官方图
+
+![vuepress-blog](http://oss-blog.test.upcdn.net/vuepress-blog-7.png)
+
+官方有下面补充：
+
+* 项目里面必须存在 `package-lock.json` 或 `npm-shrinkwrap.json`.
+* 如果 `package lock` 里面依赖和 `package.json` 不一致， `npm ci` 会报错并且退出， 而不是更新 `package lock` 文件
+* `npm ci` 只能一次性安装整个工程的依赖， 不能使用这个命令单独添加依赖
+* 如果 `node_modules` 文件夹存在， 它会在安装依赖之前删除这个文件夹
+* 它不会改变 `package.json` 或者任何 `package-locks`
 

@@ -1,7 +1,7 @@
 <template>
   <div
     class="reward"
-    v-if="isSHowReward"
+    v-if="isShowReward"
   >
     <div
       class="reward-btn animated"
@@ -77,9 +77,15 @@
     },
 
     computed: {
-      isSHowReward() {
-        const { home } = this.$frontmatter;
-        return !(home && !this.showInHome);
+      isShowReward() {
+        const { home, isShowReward, layout } = this.$frontmatter;
+        if (home) {
+          return false;
+        }
+        if (layout) {
+          return false;
+        }
+        return !(isShowReward === false);
       }
     },
 
@@ -162,7 +168,8 @@
       background-color: #fff;
       border: 1px solid lighten($textColor, 30%);
       position: fixed;
-      // top: calc(50% - 130px + 20px);
+      min-height: 260px;
+      top: calc(50% - 130px + 20px);
       right: 0;
       border-radius: 5px;
       overflow: hidden;

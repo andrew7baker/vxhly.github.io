@@ -210,7 +210,7 @@ module.exports = {
         return new Date().toISOString()
       }
     }],
-    [require("./plugins/reward/index"), {
+    ['reward', {
       'rewardOption': [
         {
           'text': '微信',
@@ -221,6 +221,14 @@ module.exports = {
           'url': '/Alipay.png'
         }
       ]
-    }]
+    }],
+    [
+      "dynamic-title",
+      {
+        'showText': "(/≧▽≦/)耶！主人最爱你了！",
+        'hideText': "(＞人＜;)呀！主人我走丢了，看到我了嘛？",
+        'recoverTime': 2000
+      }
+    ]
   ]
 }

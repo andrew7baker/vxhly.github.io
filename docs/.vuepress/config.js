@@ -203,6 +203,7 @@ module.exports = {
     //     "height": 281.6
     //   }
     // ],
+    // ["@vuepress-reco/vuepress-plugin-kan-ban-niang"],
     ["sitemap", {
       "hostname": "https://vxhly.github.io",
       "exclude": ['/404.html'],

@@ -19,10 +19,8 @@
     "vuepress-plugin-nest": "^1.0.1",
     "vuepress-plugin-one-click-copy": "^1.0.1",
     "vuepress-plugin-sitemap": "^2.3.0",
-    "vuepress-theme-reco": "^1.1.1-alpha.2"
-  },
-  "description": "源于生活而高于生活",
-  "dependencies": {
+    "vuepress-theme-reco": "^1.1.1-alpha.2",
     "vuepress-plugin-reward": "^1.0.0"
-  }
+  },
+  "description": "源于生活而高于生活"
 }

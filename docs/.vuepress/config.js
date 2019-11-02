@@ -204,12 +204,14 @@ module.exports = {
     //     "height": 281.6
     //   }
     // ],
-    [require('./plugin/kanbanniang/index.js'), {
+    [require("./plugin/kanbanniang/index.js"), {
       "theme": ["kesshouban"],
       "messages": {
-        "welcome": "哦尼桑, 哦尼酱, お帰りなさい !",
-        "home": "准备好回家了吗？要起航了!",
-        "close": "讨厌啦！真的要离开我吗？"
+        "welcome": ["哦尼桑, 哦尼酱, お帰りなさい !", "你好! 我是你的私人助理, 需要我的帮助吗?"],
+        "home": ["准备好回家了吗? 要起航了!", "迷路了吗? 需要人家带你回家吗?", "远方漂泊的人, 常回家看看吧!"],
+        "photo": ["呀! 要给人家拍照了, 羞死了羞死了!", "要拍照了, 茄子✌️", "保持微笑就好"],
+        "close": ["讨厌啦! 真的要离开我吗？", "哼, 干嘛要关了人家(＞人＜;)", "呜呜呜～, 不要离开人家!", "哼! 你会后悔的!!"],
+        "about": ["想知道我的一切?", "想知道关于我主人的更多信息吗？", "如果我主人的开源项目帮到你了, 别忘了给我主人来个 start!"]
       },
       "messageStyle": {
         "position": "fixed",
@@ -231,29 +233,29 @@ module.exports = {
     }],
     ["sitemap", {
       "hostname": "https://vxhly.github.io",
-      "exclude": ['/404.html'],
+      "exclude": ["/404.html"],
       "dateFormatter": val => {
         return new Date().toISOString()
       }
     }],
-    ['reward', {
-      'rewardOption': [
+    ["reward", {
+      "rewardOption": [
         {
-          'text': '微信',
-          'url': '/WeChat.png'
+          "text": "微信",
+          "url": "/WeChat.png"
         },
         {
-          'text': '支付宝',
-          'url': '/Alipay.png'
+          "text": "支付宝",
+          "url": "/Alipay.png"
         }
       ]
     }],
     [
       "dynamic-title",
       {
-        'showText': "(/≧▽≦/)耶！主人最爱你了！",
-        'hideText': "(＞人＜;)呀！主人我走丢了，看到我了嘛？",
-        'recoverTime': 2000
+        "showText": "(/≧▽≦/)耶！主人最爱你了！",
+        "hideText": "(＞人＜;)呀！主人我走丢了，看到我了嘛？",
+        "recoverTime": 2000
       }
     ]
   ]

@@ -84,7 +84,8 @@ module.exports = {
       {
         "text": "Contact",
         "icon": "reco-message",
-        "items": [{
+        "items": [
+          {
             "text": "NPM",
             "link": "https://www.npmjs.com/~vxhly",
             "icon": "reco-npm"
@@ -165,7 +166,7 @@ module.exports = {
       "updatePopup": true
     }],
     ["one-click-copy", {
-      "copy_message": "复制成功了, 快去粘贴使用吧 !!!"
+      "copyMessage": "复制成功了, 快去粘贴使用吧 !!!"
     }],
     ["nest", {
       "color": "255,0,255",
@@ -257,6 +258,7 @@ module.exports = {
         "hideText": "(＞人＜;)呀！主人我走丢了，看到我了嘛？",
         "recoverTime": 2000
       }
-    ]
+    ],
+    'vue-demo'
   ]
 }

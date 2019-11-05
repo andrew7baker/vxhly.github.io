@@ -8,6 +8,7 @@
         class="messageBox"
         :style="messageStyle"
         v-show="isShowMessageBox"
+        v-html="message"
       >
         {{ message || '欢迎来到 ' + $site.title }}
       </div>
@@ -85,7 +86,7 @@
           </svg>
         </i>
         <i
-          v-show="myTheme.length > 1"
+          v-if="myTheme.length > 1"
           @click="changeTheme"
           @mouseenter="hoverChangeTheme"
           @mouseleave="resetMessage"
@@ -174,8 +175,11 @@
 
 <script>
   import live2dJSString from "./assets/js/live2d";
+  import tips from "./assets/js/waifu-tips";
+
   export default {
     name: "KanBanNiang",
+    mixins: [tips],
     data() {
       return {
         isLoaded: true,

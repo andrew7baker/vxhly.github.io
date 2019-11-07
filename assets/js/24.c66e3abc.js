@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[24],{281:function(n,t,e){},405:function(n,t,e){"use strict";var s=e(281);e.n(s).a},527:function(n,t,e){"use strict";e.r(t);e(405);var s=e(2),c=Object(s.a)({},(function(){var n=this.$createElement;return(this._self._c||n)("div",{staticClass:"curvedarrow"})}),[],!1,null,null,null);t.default=c.exports}}]);

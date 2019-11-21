@@ -40,33 +40,6 @@ ERROR in   ReferenceError: process is not defined
 new HtmlWebpackPlugin({
   filename: 'index.html',
   template: path.resolve(__dirname, '../src/index.ejs'),
-  templateParameters(compilation, assets, options) {
-    return {
-      compilation: compilation,
-      webpack: compilation.getStats().toJson(),
-      webpackConfig: compilation.options,
-      htmlWebpackPlugin: {
-        files: assets,
-        options: options
-      },
-      process,
-    };
-  },
-  minify: {
-    collapseWhitespace: true,
-    removeAttributeQuotes: true,
-    removeComments: true
-  },
-  nodeModules: false
-})
-```
-
-`.electron-vue/webpack.web.config.js`
-
-``` javascript
-new HtmlWebpackPlugin({
-  filename: 'index.html',
-  template: path.resolve(__dirname, '../src/index.ejs'),
   minify: {
     collapseWhitespace: true,
     removeAttributeQuotes: true,
@@ -87,6 +60,33 @@ new HtmlWebpackPlugin({
   nodeModules: process.env.NODE_ENV !== 'production'
     ? path.resolve(__dirname, '../node_modules')
     : false
+})
+```
+
+`.electron-vue/webpack.web.config.js`
+
+``` javascript
+new HtmlWebpackPlugin({
+  filename: 'index.html',
+  template: path.resolve(__dirname, '../src/index.ejs'),
+  templateParameters(compilation, assets, options) {
+    return {
+      compilation: compilation,
+      webpack: compilation.getStats().toJson(),
+      webpackConfig: compilation.options,
+      htmlWebpackPlugin: {
+        files: assets,
+        options: options
+      },
+      process,
+    };
+  },
+  minify: {
+    collapseWhitespace: true,
+    removeAttributeQuotes: true,
+    removeComments: true
+  },
+  nodeModules: false
 })
 ```
 

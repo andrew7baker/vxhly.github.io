@@ -27,7 +27,7 @@ sSocks 是一个 socks 代理工具套装, 可用来开启 socks 代理服务, �
 
 ### 下载
 
-[sSocks 更新地址](//sourceforge.net/projects/ssocks/)<br>
+[sSocks 更新地址](http://sourceforge.net/projects/ssocks/)<br>
 这里下载的版本为 `0.0.14` 
 
 ``` bash

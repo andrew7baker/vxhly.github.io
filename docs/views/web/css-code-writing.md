@@ -53,7 +53,7 @@ date: 2016-08-24 20:40:06
 
 ### 利用插件实现自动排序
 
-使用过 Sublime text 的童鞋应该知道有一款插件 [CSScomb](//csscomb.com/) 是用来自动排序 CSS 属性的, 这是一个不错的偷懒方式, 也是加快开发速度的技巧
+使用过 Sublime text 的童鞋应该知道有一款插件 [CSScomb](http://csscomb.com/) 是用来自动排序 CSS 属性的, 这是一个不错的偷懒方式, 也是加快开发速度的技巧
 
 ## CSS 书写规范
 

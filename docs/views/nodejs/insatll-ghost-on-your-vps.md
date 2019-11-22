@@ -13,8 +13,8 @@ Ghost 采用 Node.js 编写, 默认使用 SQLite3 数据库, 非常轻量, 因�
 
 ## 下载 Ghost
 
-[Ghost 中文官网](//www.ghostchina.com/)
-[Ghost 英文官网](//ghost.org/)
+[Ghost 中文官网](http:////www.ghostchina.com/)
+[Ghost 英文官网](http:////ghost.org/)
 
 ## Ghost 中文集成版(推介)
 
@@ -217,9 +217,9 @@ forever list
 
 ### Ghost 邮件系统设置详解
 
-[Ghost 邮件系统设置详解](//www.ghostchina.com/mail-configuration-on-self-hosted-version-of-ghost/)
+[Ghost 邮件系统设置详解](http://www.ghostchina.com/mail-configuration-on-self-hosted-version-of-ghost/)
 
 ### 为博客增加 "标签云"
 
-[为博客增加 "标签云"](//www.ghostchina.com/output-tag-cloud/)
+[为博客增加 "标签云"](http://www.ghostchina.com/output-tag-cloud/)
 

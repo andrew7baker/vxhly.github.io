@@ -323,7 +323,7 @@ $(function() {
 </table>
 ```
 
-[codepen 调试地址](//codepen.io/anon/pen/zBbRkJ?editors=1100#0)
+[codepen 调试地址](http://codepen.io/anon/pen/zBbRkJ?editors=1100#0)
 
 ## 清除浮动, 万能的 float 闭合
 

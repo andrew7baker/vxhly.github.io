@@ -63,7 +63,7 @@ touch love_{1..10}_Liunx.txt
 
 ## 命令手册速查
 
-Liunx 下命令成千上百, 有个速查手册也是不错的, [Liunx 命令速查手册](//man.linuxde.net/)
+Liunx 下命令成千上百, 有个速查手册也是不错的, [Liunx 命令速查手册](http://man.linuxde.net/)
 
 ## Liunx 用户管理
 

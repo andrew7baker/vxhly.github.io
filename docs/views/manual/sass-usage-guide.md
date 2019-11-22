@@ -15,7 +15,7 @@ SASS 是 CSS 预处理器之一, 它的基本思想是, 用一种专门的编程
 
 ### 安装 Ruby
 
-SASS 是 Ruby 语言写的, 但是两者的语法没有关系。不懂 Ruby, 照样使用。只是必须先[安装 Ruby](//www.ruby-lang.org/zh_cn/downloads/), 然后再安装 SASS.
+SASS 是 Ruby 语言写的, 但是两者的语法没有关系。不懂 Ruby, 照样使用。只是必须先[安装 Ruby](http://www.ruby-lang.org/zh_cn/downloads/), 然后再安装 SASS.
 
 在 Ubuntu 下安装 Ruby, `For Example:` 
 
@@ -63,7 +63,7 @@ sass test.scss
 sass test.scss test.css
 ```
 
-SASS 提供四个[编译风格](//sass-lang.com/docs/yardoc/file. SASS_REFERENCE.html#output_style)的选项
+SASS 提供四个[编译风格](http://sass-lang.com/docs/yardoc/file. SASS_REFERENCE.html#output_style)的选项
 
 * **nested** => 嵌套缩进的 css 代码, 它是默认值。
 * **expanded** => 没有缩进的、扩展的 css 代码。

@@ -13,8 +13,8 @@ Flex 布局, 可以简便、完整、响应式地实现各种页面布局, 目�
 
 ## GithHub 上优秀的样式表插件
 
-[scss-flex.css](//github.com/vxhly/scss-flex)<br>
-[flex.css](//github.com/lzxb/flex.css)
+[scss-flex.css](http://github.com/vxhly/scss-flex)<br>
+[flex.css](http://github.com/lzxb/flex.css)
 
 ## 例子
 

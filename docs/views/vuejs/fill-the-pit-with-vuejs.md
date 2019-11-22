@@ -624,7 +624,7 @@ export default {
 
 ## 规范性
 
-> 这里只举例 `.vue` 文件 script 模块中, 各个函数的书写顺序, 更多的规范性请查询文档 [风格指南](//cn.vuejs.org/v2/style-guide/)
+> 这里只举例 `.vue` 文件 script 模块中, 各个函数的书写顺序, 更多的规范性请查询文档 [风格指南](http://cn.vuejs.org/v2/style-guide/)
 
 ``` javascript
 export default {

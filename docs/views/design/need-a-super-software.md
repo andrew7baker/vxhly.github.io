@@ -17,7 +17,7 @@ date: 2016-08-07 16:49:47
 
 ### 下载地址
 
-官网下载地址: [Atom](//github.com/atom/atom/releases)<br>
+官网下载地址: [Atom](http://github.com/atom/atom/releases)<br>
 官网下载地址下不下来点击以下链接下载: [atom-amd64.deb](http://oss-blog.test.upcdn.net/atom-amd64.deb?attname=) [AtomSetup.exe](http://oss-blog.test.upcdn.net/AtomSetup.exe?attname=)
 
 ### 安装插件
@@ -50,13 +50,13 @@ date: 2016-08-07 16:49:47
 
 ### 下载地址
 
-[Brackets](//github.com/adobe/brackets/releases)<br>
+[Brackets](http://github.com/adobe/brackets/releases)<br>
 官网下载地址下不下来点击以下链接下载: [Brackets. Release.1.8.msi](http://oss-blog.test.upcdn.net/Brackets.Release.1.8.msi?attname=)<br>
 [Brackets. Release.1.8.64-bit.deb](http://oss-blog.test.upcdn.net/Brackets.Release.1.8.64-bit.deb?attname=)
 
 ### 安装插件
 
-部分插件是使用国外源的, 很容易被墙的。所以系统最好要有个代理服务器, 这里推荐 [高梯子](//www.gaotizi.com/aff.php?aff=133)。
+部分插件是使用国外源的, 很容易被墙的。所以系统最好要有个代理服务器, 这里推荐 [高梯子](http://www.gaotizi.com/aff.php?aff=133)。
 
 ### 如何安装
 
@@ -87,7 +87,7 @@ date: 2016-08-07 16:49:47
 
 ### 下载地址
 
-官网下载地址: [Sublime Text 3](//www.sublimetext.com/3)<br>
+官网下载地址: [Sublime Text 3](http://www.sublimetext.com/3)<br>
 官网下载地址下不下来点击以下链接下载: [Sublime Text Build 3126 Setup.exe](http://oss-blog.test.upcdn.net/Sublime%20Text%20Build%203126%20Setup.exe?attname=)<br>
 [Sublime Text Build 3126 x64 Setup.exe](http://oss-blog.test.upcdn.net/Sublime%20Text%20Build%203126%20x64%20Setup.exe?attname=)
 
@@ -156,7 +156,7 @@ print('Please restart Sublime Text to finish installation')
 
 ### 下载地址
 
-官网下载地址: [VS code](//code.visualstudio.com/Download)
+官网下载地址: [VS code](http://code.visualstudio.com/Download)
 
 ### 安装插件
 

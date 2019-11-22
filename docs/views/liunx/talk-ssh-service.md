@@ -49,7 +49,7 @@ SSH 之所以能够保证安全, 原因在于它采用了公钥加密。
 
 可以设想, 如果攻击者插在用户与远程主机之间（比如在公共的 wifi 区域）, 用伪造的公钥, 获取用户的登录密码。再用这个密码登录远程主机, 那么 SSH 的安全机制就荡然无存了。
 
-这种风险就是著名的["中间人攻击"](//en.wikipedia.org/wiki/Man-in-the-middle_attack)（Man-in-the-middle attack）。
+这种风险就是著名的["中间人攻击"](http://en.wikipedia.org/wiki/Man-in-the-middle_attack)（Man-in-the-middle attack）。
 
 ## 口令登录
 

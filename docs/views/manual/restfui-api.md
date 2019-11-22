@@ -23,7 +23,7 @@ REST API一般用来将某种资源和允许的对资源的操作暴露给外界
 
 ## 协议
 
-API 与用户的通信协议, 总是使用 [https](//www.ruanyifeng.com/blog/2014/02/ssl_tls.html) 协议。
+API 与用户的通信协议, 总是使用 [https](http://www.ruanyifeng.com/blog/2014/02/ssl_tls.html) 协议。
 
 ## 域名
 
@@ -41,7 +41,7 @@ API 与用户的通信协议, 总是使用 [https](//www.ruanyifeng.com/blog/201
 
 <https://api.example.com/v1/>
 
-另一种做法是, 将版本号放在 HTTP 头信息中, 但不如放入 URL 方便和直观。[Github](//developer.github.com/v3/media/#request-specific-version) 采用这种做法。
+另一种做法是, 将版本号放在 HTTP 头信息中, 但不如放入 URL 方便和直观。[Github](http://developer.github.com/v3/media/#request-specific-version) 采用这种做法。
 
 ## 路径（Endpoint）
 
@@ -150,7 +150,7 @@ API 与用户的通信协议, 总是使用 [https](//www.ruanyifeng.com/blog/201
 * **502** `Bad Gateway` -> 【 `*` 】 => 作为网关或者代理工作的服务器尝试执行请求时, 从上游服务器接收到无效的响应。
 * **503** `Service Unavailable` -> 【 `*` 】 => 由于临时的服务器维护或者过载, 服务器当前无法处理请求。这个状况是临时的, 并且将在一段时间以后恢复。
 
-状态码的完全列表参见[这里](//www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)。
+状态码的完全列表参见[这里](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)。
 
 ## 错误处理（Error handling）
 
@@ -183,7 +183,7 @@ API 与用户的通信协议, 总是使用 [https](//www.ruanyifeng.com/blog/201
 
 ## Hypermedia API
 
-RESTful API 最好做到 Hypermedia, 即返回结果中提供链接, 连向其他 API 方法, 使得用户不查文档, 也知道下一步应该做什么。 比如, 当用户向 [api.github.com](//api.github.com/) 的根目录发出请求, 会得到这样一个文档。
+RESTful API 最好做到 Hypermedia, 即返回结果中提供链接, 连向其他 API 方法, 使得用户不查文档, 也知道下一步应该做什么。 比如, 当用户向 [api.github.com](http://api.github.com/) 的根目录发出请求, 会得到这样一个文档。
 
 ``` json
 {
@@ -198,7 +198,7 @@ RESTful API 最好做到 Hypermedia, 即返回结果中提供链接, 连向其�
 
 上面代码表示, 文档中有一个 link 属性, 用户读取这个属性就知道下一步该调用什么 API 了。rel 表示这个 API 与当前网址的关系（collection 关系, 并给出该 collection 的网址）, href 表示 API 的路径, title 表示 API 的标题, type 表示返回类型。
 
-Hypermedia API 的设计被称为 [HATEOAS](//en.wikipedia.org/wiki/HATEOAS)。Github 的 API 就是这种设计, 访问 [api.github.com](//api.github.com/) 会得到一个所有可用 API 的网址列表。
+Hypermedia API 的设计被称为 [HATEOAS](http://en.wikipedia.org/wiki/HATEOAS)。Github 的 API 就是这种设计, 访问 [api.github.com](http://api.github.com/) 会得到一个所有可用 API 的网址列表。
 
 ``` json
 {
@@ -207,7 +207,7 @@ Hypermedia API 的设计被称为 [HATEOAS](//en.wikipedia.org/wiki/HATEOAS)。G
 }
 ```
 
-从上面可以看到, 如果想获取当前用户的信息, 应该去访问 [api.github.com/user](//api.github.com/user), 然后就得到了下面结果。
+从上面可以看到, 如果想获取当前用户的信息, 应该去访问 [api.github.com/user](http://api.github.com/user), 然后就得到了下面结果。
 
 ``` json
 {
@@ -220,6 +220,6 @@ Hypermedia API 的设计被称为 [HATEOAS](//en.wikipedia.org/wiki/HATEOAS)。G
 
 ## 其他
 
-* （1）API 的身份认证应该使用 [OAuth 2.0](//www.ruanyifeng.com/blog/2014/05/oauth_2_0.html) 框架。
+* （1）API 的身份认证应该使用 [OAuth 2.0](http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html) 框架。
 * （2）服务器返回的数据格式, 应该尽量使用 JSON, 避免使用 XML。
 

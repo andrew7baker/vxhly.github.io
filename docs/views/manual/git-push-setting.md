@@ -23,8 +23,8 @@ sudo apt-get install git
 
 创建你的 GitHub 帐号, 或者 Git@OSC 帐号
 
-[GitHub](//github.com/) 链接<br>
-[Git@OSC](//git.oschina.net/) 链接
+[GitHub](http://github.com/) 链接<br>
+[Git@OSC](http://git.oschina.net/) 链接
 
 ## liunx 创建 SSH 密钥
 
@@ -36,7 +36,7 @@ ssh-keygen -t rsa -C "xxxxx@xxxxx.com"
 
 查看你的 public key, 并把它添加到您的账户中
 
-如 [GitHub key](//github.com/settings/keys) 如 [Git@OSC key](//git.oschina.net/profile/sshkeys)
+如 [GitHub key](http://github.com/settings/keys) 如 [Git@OSC key](http://git.oschina.net/profile/sshkeys)
 
 使用以下命令查看
 
@@ -60,8 +60,8 @@ ssh -T git@git.oschina.net
 
 ## GitHub 或 Git@OSC 上创建项目
 
-[GitHub](//github.com/) 链接<br>
-[Git@OSC](//git.oschina.net/) 链接
+[GitHub](http://github.com/) 链接<br>
+[Git@OSC](http://git.oschina.net/) 链接
 
 ## 本地配置
 

@@ -7,7 +7,7 @@ date: 2016-07-31 21:32:24
 ---
 
 ::: tip 前言
-翻墙, 主要用于 npm 的代理。没有 vpn 服务器不要紧, 肯花点小钱就可以搞定（访问 [高梯子](//www.gaotizi.com/aff.php?aff=133)
+翻墙, 主要用于 npm 的代理。没有 vpn 服务器不要紧, 肯花点小钱就可以搞定（访问 [高梯子](http://www.gaotizi.com/aff.php?aff=133)
 :::
 <!-- more -->
 
@@ -17,8 +17,8 @@ date: 2016-07-31 21:32:24
 
 下载 shadowsocks-libev 安装包, 解压并重命名为 shadowsocks-libev
 
-[Source code (zip) 下载地址](//github.com/shadowsocks/shadowsocks-libev/archive/v2.4.6.zip)<br>
-[Source code (tar.gz) 下载地址](//github.com/shadowsocks/shadowsocks-libev/archive/v2.4.6.tar.gz)
+[Source code (zip) 下载地址](http://github.com/shadowsocks/shadowsocks-libev/archive/v2.4.6.zip)<br>
+[Source code (tar.gz) 下载地址](http://github.com/shadowsocks/shadowsocks-libev/archive/v2.4.6.tar.gz)
 
 ### 安装 shadowsocks-libev
 
@@ -337,7 +337,7 @@ npm config delete https-proxy
 
 ## 附上 Shadowsocks 服务器搭建方法
 
-首先你要有一台专属于你的服务器, [hostker](//www.hostker.com/) 这里提供较为便宜的服务器
+首先你要有一台专属于你的服务器, [hostker](http://www.hostker.com/) 这里提供较为便宜的服务器
 
 ### 更新软件源
 
@@ -379,7 +379,7 @@ ssserver -p 8388 -k password -m rc4-md5 --user nobody -d start
 
 ### Shadowsocks Windows 端
 
-[shadowsocks-windows](//github.com/shadowsocks/shadowsocks-windows/releases)
+[shadowsocks-windows](http://github.com/shadowsocks/shadowsocks-windows/releases)
 
 ## 使用 shadowsocks-libev 一键安装脚本
 

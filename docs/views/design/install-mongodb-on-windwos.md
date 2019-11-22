@@ -13,7 +13,7 @@ MongoDB 是目前在 IT 行业非常流行的一种非关系型数据库 (NoSql)
 
 ## 下载
 
-[MongoDB 官网下载链接](//www.mongodb.com/download-center?jmp=nav#community)
+[MongoDB 官网下载链接](http://www.mongodb.com/download-center?jmp=nav#community)
 
 如果被墙的话, 请点击 [mongodb-win32-x86_64-2008plus-ssl-3.4.1-signed.msi](http://oss-blog.test.upcdn.net/mongodb-win32-x86_64-2008plus-ssl-3.4.1-signed.msi?attname=) 下载
 
@@ -137,7 +137,7 @@ sudo apt-get -y install mongodb
 ## 图形化管理工具
 
 ::: tip 工具推荐
-推荐图形化管理工具 [adminMongo](//adminmongo.markmoffat.com/)
+推荐图形化管理工具 [adminMongo](http://adminmongo.markmoffat.com/)
 :::
 
 ### 环境需求
@@ -168,7 +168,7 @@ pm2 start app.js
 
 ### 配置使用
 
-Connection name => 连接名随意 Connection string => 连接方法:  `mongodb://<user>:<password>@127.0.0.1:<port>/<db>` Connection options => 链接选项 [docs](//mongodb.github.io/node-mongodb-native/2.1/reference/connecting/connection-settings/)
+Connection name => 连接名随意 Connection string => 连接方法:  `mongodb://<user>:<password>@127.0.0.1:<port>/<db>` Connection options => 链接选项 [docs](http://mongodb.github.io/node-mongodb-native/2.1/reference/connecting/connection-settings/)
 
 连接成功后创建一个数据库进行测试<br>
 

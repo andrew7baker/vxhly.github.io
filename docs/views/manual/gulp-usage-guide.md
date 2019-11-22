@@ -34,7 +34,7 @@ Gulp 的核心 API 只有 4 个: `src` 、 `dest` 、 `task` 、 `watch`
 * `gulp.task(name[, deps], fn)` => 注册任务。**name**: 任务名称（通过 gulp name 来执行这个任务）; **deps**: 可选的数组, 在本任务运行中所需要所依赖的其他任务（当前任务在依赖任务执行完毕后才会执行）; **fn**: 任务函数（function 方法）；
 * `gulp.watch(glob [, opts], tasks)` => 监视文件的变化并运行相应的任务。**glob**: 路径模式匹配; **opts**: 可以选配置对象; **taks**: 执行的任务；
 
-[API 帮助文档](//github.com/gulpjs/gulp/blob/master/docs/API.md)
+[API 帮助文档](http://github.com/gulpjs/gulp/blob/master/docs/API.md)
 
 ## 安装 Gulp
 
@@ -64,19 +64,19 @@ npm install gulp --save-dev
 
 ### 推荐插件
 
-* 静态服务器 ([gulp-webserver](//github.com/schickling/gulp-webserver))
+* 静态服务器 ([gulp-webserver](http://github.com/schickling/gulp-webserver))
 * 网页自动刷新 ([gulp-livereload][<https://github.com/vohof/gulp-livereload>])
-* 编译 **Sass** ([gulp-ruby-sass](//github.com/sindresorhus/gulp-ruby-sass))
-* **Autoprefixer** ([gulp-autoprefixer](//github.com/Metrime/gulp-autoprefixer))
-* 缩小化(minify) **CSS** ([gulp-minify-css](//github.com/jonathanepollack/gulp-minify-css))
-* **JSHint** ([gulp-jshint](//github.com/wearefractal/gulp-jshint))
-* 拼接 ([gulp-concat](//github.com/wearefractal/gulp-concat))
-* 丑化(Uglify) ([gulp-uglify](//github.com/terinjokes/gulp-uglify))
-* 图片压缩 ([gulp-imagemin](//github.com/sindresorhus/gulp-imagemin))
-* 即时重整(LiveReload) ([gulp-livereload](//github.com/vohof/gulp-livereload))
-* 清理档案 ([gulp-clean](//github.com/peter-vilja/gulp-clean))
-* 图片快取, 只有更改过得图片会进行压缩 ([gulp-cache](//github.com/jgable/gulp-cache/))
-* 更动通知 ([gulp-notify](//github.com/mikaelbr/gulp-notify))
+* 编译 **Sass** ([gulp-ruby-sass](http://github.com/sindresorhus/gulp-ruby-sass))
+* **Autoprefixer** ([gulp-autoprefixer](http://github.com/Metrime/gulp-autoprefixer))
+* 缩小化(minify) **CSS** ([gulp-minify-css](http://github.com/jonathanepollack/gulp-minify-css))
+* **JSHint** ([gulp-jshint](http://github.com/wearefractal/gulp-jshint))
+* 拼接 ([gulp-concat](http://github.com/wearefractal/gulp-concat))
+* 丑化(Uglify) ([gulp-uglify](http://github.com/terinjokes/gulp-uglify))
+* 图片压缩 ([gulp-imagemin](http://github.com/sindresorhus/gulp-imagemin))
+* 即时重整(LiveReload) ([gulp-livereload](http://github.com/vohof/gulp-livereload))
+* 清理档案 ([gulp-clean](http://github.com/peter-vilja/gulp-clean))
+* 图片快取, 只有更改过得图片会进行压缩 ([gulp-cache](http://github.com/jgable/gulp-cache/))
+* 更动通知 ([gulp-notify](http://github.com/mikaelbr/gulp-notify))
 
 ### 通过 npm 进行安装
 

@@ -58,7 +58,7 @@ date: 2016-10-22 22:28:14
 ## 使用 CSS Reset
 
 ::: tip 提示
-虽然这些年来随着浏览器的迅速发展与规范的统一, 浏览器特性碎片化的情况有所改善, 但是在不同的浏览器之间仍然存在着很多的行为差异。而解决这种问题的最好的办法就是使用某个 CSS Reset 来为所有的元素设置统一的样式, 保证你能在相对统一干净的样式表的基础上开始工作。目前流行的 Reset 库有 [normalize.css](//necolas.github.io/normalize.css/), [minireset](//jgthms.com/minireset.css/) 以及 [ress](//github.com/filipelinhares/ress) , 它们都可以修正很多已知的浏览器之间的差异性。
+虽然这些年来随着浏览器的迅速发展与规范的统一, 浏览器特性碎片化的情况有所改善, 但是在不同的浏览器之间仍然存在着很多的行为差异。而解决这种问题的最好的办法就是使用某个 CSS Reset 来为所有的元素设置统一的样式, 保证你能在相对统一干净的样式表的基础上开始工作。目前流行的 Reset 库有 [normalize.css](http://necolas.github.io/normalize.css/), [minireset](http://jgthms.com/minireset.css/) 以及 [ress](http://github.com/filipelinhares/ress) , 它们都可以修正很多已知的浏览器之间的差异性。
 :::
 
 而如果你不打算用某个外在的库, 那么建议可以使用如下的基本规则: 
@@ -113,7 +113,7 @@ section {
 }
 ```
 
-不过这种方式也是存在缺陷的, 譬如你无法设置图片的懒加载、图片无法被搜索引擎或者其他类似的工具抓取到, 有个不错的属性叫 [object-fit](//tutorialzine.com/2016/04/quick-tip-get-to-know-css-object-fit-position/) 可以解决这个问题, 不过该属性目前的浏览器支持并不是很完善。
+不过这种方式也是存在缺陷的, 譬如你无法设置图片的懒加载、图片无法被搜索引擎或者其他类似的工具抓取到, 有个不错的属性叫 [object-fit](http://tutorialzine.com/2016/04/quick-tip-get-to-know-css-object-fit-position/) 可以解决这个问题, 不过该属性目前的浏览器支持并不是很完善。
 
 ## Better Table Borders
 
@@ -202,7 +202,7 @@ p {
 .footer_column_left {}
 ```
 
-而涉及到具体的变量命名规范时, 建议是使用 [BEM](//en.bem.info/) 规范, 只要遵循一些简单的原则即可以保证基于组件风格的命名一致性。你也可以参考 [CSS Tricks](//css-tricks.com/bem-101/) 来获得更多的细节描述。
+而涉及到具体的变量命名规范时, 建议是使用 [BEM](http://en.bem.info/) 规范, 只要遵循一些简单的原则即可以保证基于组件风格的命名一致性。你也可以参考 [CSS Tricks](http://css-tricks.com/bem-101/) 来获得更多的细节描述。
 
 ## 避免重复代码
 
@@ -245,7 +245,7 @@ html {
 
 现在 CSS 社区已经非常庞大, 并且不断地有新的各式各样的库开源出来。这些库可以帮助我们解决从小的代码片到用于构建完整的响应式应用的全框架。
 
-所以如果下次你再碰到什么 CSS 问题的时候, 在打算撸起袖子自己上之前可以尝试在 [GitHub](//github.com/) 或者 [CodePen](//codepen.io/) 上搜索可行方案。
+所以如果下次你再碰到什么 CSS 问题的时候, 在打算撸起袖子自己上之前可以尝试在 [GitHub](http://github.com/) 或者 [CodePen](http://codepen.io/) 上搜索可行方案。
 
 ## 尽可能使用低优先级的选择器
 
@@ -268,7 +268,7 @@ a.active {
 }
 ```
 
-我们本来希望将 `.active` 类添加到按钮上然后使其显示为红色, 不过在上面这个例子中很明显起不了作用, 因为 `button` 已经以 `ID` 选择器设置过了背景色, 也就是所谓的 [Higher Selector Specificity](//developer.mozilla.org/en-US/docs/Web/CSS/Specificity)。一般来说, 选择器的优先级顺序为: `ID(#id) > Class(.class) > Type(header)` 
+我们本来希望将 `.active` 类添加到按钮上然后使其显示为红色, 不过在上面这个例子中很明显起不了作用, 因为 `button` 已经以 `ID` 选择器设置过了背景色, 也就是所谓的 [Higher Selector Specificity](http://developer.mozilla.org/en-US/docs/Web/CSS/Specificity)。一般来说, 选择器的优先级顺序为: `ID(#id) > Class(.class) > Type(header)` 
 
 ## 避免使用 !important
 
@@ -300,7 +300,7 @@ a.active {
 
 ## 在大型项目中使用预处理器
 
-估计你肯定听说过 [Sass](//sass-lang.com/) , [Less](//lesscss.org/) , [PostCSS](//postcss.org/) , [Stylus](//stylus-lang.com/) 这些预处理器与对应的语法。Preprocessors 可以允许我们将未来的 CSS 特性应用在当前的代码开发中, 譬如变量支持、函数、嵌套式的选择器以及很多其他的特性。
+估计你肯定听说过 [Sass](http://sass-lang.com/) , [Less](http://lesscss.org/) , [PostCSS](http://postcss.org/) , [Stylus](http://stylus-lang.com/) 这些预处理器与对应的语法。Preprocessors 可以允许我们将未来的 CSS 特性应用在当前的代码开发中, 譬如变量支持、函数、嵌套式的选择器以及很多其他的特性。
 
 这里我们以 Sass 为例: 
 
@@ -321,9 +321,9 @@ a:hover {
 
 使用特定的浏览器前缀是 CSS 开发中常见的工作之一, 不同的浏览器、不同的属性对于前缀的要求也不一样, 这就使得我们无法在编码过程中记住所有的前缀规则。并且在写样式代码的时候还需要加上特定的浏览器前缀支持也是个麻烦活, 幸亏现在也是有很多工具可以辅助我们进行这样的开发: 
 
-* Online tools -------------------- **[Autoprefixer](//autoprefixer.github.io/)**
-* Text editor plugins -------------------- **[Sublime Text](//github.com/sindresorhus/sublime-autoprefixer)** , **[Atom](//atom.io/packages/autoprefixer)**
-* Libraries -------------------- **[Autoprefixer](//github.com/postcss/autoprefixer)** (PostCSS)
+* Online tools -------------------- **[Autoprefixer](http://autoprefixer.github.io/)**
+* Text editor plugins -------------------- **[Sublime Text](http://github.com/sindresorhus/sublime-autoprefixer)** , **[Atom](http://atom.io/packages/autoprefixer)**
+* Libraries -------------------- **[Autoprefixer](http://github.com/postcss/autoprefixer)** (PostCSS)
 
 ## 在生产环境下使用 Minified 代码
 
@@ -331,15 +331,15 @@ a:hover {
 
 当然, 经过压缩之后的代码毫无可读性, 因此在开发阶段我们还是应该使用普通的版本。对于 CSS 的压缩有很多的现行工具:
 
-* Online tools -------------------- **[CSS Minifier](//cssminifier.com/)** (API included), **[CSS Compressor](//csscompressor.com/)**
-* Text editor plugins -------------------- **[Sublime Text](//packagecontrol.io/packages/Minify)** , **[Atom](//atom.io/packages/atom-minify)**
-* Libraries -------------------- **[Minfiy](//github.com/matthiasmullie/minify)** (PHP), **[CSSO](//github.com/css/csso)** and **[CSSNano](//cssnano.co/)** (PostCSS, Grunt, Gulp)
+* Online tools -------------------- **[CSS Minifier](http://cssminifier.com/)** (API included), **[CSS Compressor](http://csscompressor.com/)**
+* Text editor plugins -------------------- **[Sublime Text](http://packagecontrol.io/packages/Minify)** , **[Atom](http://atom.io/packages/atom-minify)**
+* Libraries -------------------- **[Minfiy](http://github.com/matthiasmullie/minify)** (PHP), **[CSSO](http://github.com/css/csso)** and **[CSSNano](http://cssnano.co/)** (PostCSS, Grunt, Gulp)
 
 选择哪个工具肯定是依赖于你自己的工作流啦~
 
 ## 多参阅 Caniuse
 
-不同的浏览器在兼容性上差异很大, 因此如果我们可以针对我们所需要适配的浏览器, 在 [caniuse](//caniuse.com/) 上我们可以查询某个特性的浏览器版本适配性, 是否需要添加特定的前缀或者在某个平台上是否存在 Bug 等等。不过光光使用 caniuse 肯定是不够的, 我们还需要使用些额外的服务来进行检测。
+不同的浏览器在兼容性上差异很大, 因此如果我们可以针对我们所需要适配的浏览器, 在 [caniuse](http://caniuse.com/) 上我们可以查询某个特性的浏览器版本适配性, 是否需要添加特定的前缀或者在某个平台上是否存在 Bug 等等。不过光光使用 caniuse 肯定是不够的, 我们还需要使用些额外的服务来进行检测。
 
 ## Validate: 校验
 
@@ -347,6 +347,6 @@ a:hover {
 
 就像 **Minifers** 与 **Autoprefixers**, 也有很多可用的工具: 
 
-* Online tools: **[W3 Validator](//jigsaw.w3.org/css-validator/)** , **[CSS Lint](//csslint.net/)**
-* Text editor plugins: **[Sublime Text](//packagecontrol.io/packages/W3CValidators)** , **[Atom](//atom.io/packages/csslint)** Libraries: **[stylelint](//stylelint.io/)** (Node.js, PostCSS), **[css-validator](//www.npmjs.com/package/css-validator)** (Node.js)
+* Online tools: **[W3 Validator](http://jigsaw.w3.org/css-validator/)** , **[CSS Lint](http://csslint.net/)**
+* Text editor plugins: **[Sublime Text](http://packagecontrol.io/packages/W3CValidators)** , **[Atom](http://atom.io/packages/csslint)** Libraries: **[stylelint](http://stylelint.io/)** (Node.js, PostCSS), **[css-validator](http://www.npmjs.com/package/css-validator)** (Node.js)
 

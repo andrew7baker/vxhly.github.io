@@ -14,7 +14,7 @@ Hexo 是一个快速, 简单而高效的静态博客框架, 本文将介绍如�
 ## 准备
 
 ::: tip 提示
-你需要在 [Github](//github.com/) 上创建一个属于自己的账户, 然后新建一个仓库（new repository）, 并命名为 YourSiteName.github.io, 此时 Github 会帮助你初始化一个静态网页, 你可以根据自己的喜好选择一些模版（这都不是重点）, 接着尝试访问下你所建的站点, 成功后就可以开始动工了。
+你需要在 [Github](http://github.com/) 上创建一个属于自己的账户, 然后新建一个仓库（new repository）, 并命名为 YourSiteName.github.io, 此时 Github 会帮助你初始化一个静态网页, 你可以根据自己的喜好选择一些模版（这都不是重点）, 接着尝试访问下你所建的站点, 成功后就可以开始动工了。
 ::: 
 
 ### Node.js 环境
@@ -38,10 +38,10 @@ sudo apt-get install git
 
 ::: tip 提示
 参考链接<br>
-[Hexo 官网](//hexo.io/zh-cn/)<br>
-[Hexo 配置文档](//hexo.io/zh-cn/docs/)<br>
-[Hexo 相关指令](//hexo.io/zh-cn/docs/commands.html)<br>
-[Hexo 主题](//github.com/hexojs/hexo/wiki/Themes)
+[Hexo 官网](http://hexo.io/zh-cn/)<br>
+[Hexo 配置文档](http://hexo.io/zh-cn/docs/)<br>
+[Hexo 相关指令](http://hexo.io/zh-cn/docs/commands.html)<br>
+[Hexo 主题](http://github.com/hexojs/hexo/wiki/Themes)
 ::: 
 
 ### 安装 Hexo
@@ -168,10 +168,10 @@ hexo generate
 
 ::: tip 提示
 参考链接<br>
-[NexT 参考文档](//theme-next.iissnan.com/)<br>
-[NexT 主题配置](//theme-next.iissnan.com/theme-settings.html)<br>
-[NexT 第三方服务](//theme-next.iissnan.com/third-party-services.html)<br>
-[更多的配置问题](//theme-next.iissnan.com/faqs.html)
+[NexT 参考文档](http://theme-next.iissnan.com/)<br>
+[NexT 主题配置](http://theme-next.iissnan.com/theme-settings.html)<br>
+[NexT 第三方服务](http://theme-next.iissnan.com/third-party-services.html)<br>
+[更多的配置问题](http://theme-next.iissnan.com/faqs.html)
 :::
 
 ### 下载主题

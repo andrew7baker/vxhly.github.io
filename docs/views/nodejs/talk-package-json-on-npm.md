@@ -62,7 +62,7 @@ name 是这个东西的名字。注意:
 `version` 必须能被 `node-semver` 解析, 它被包在 `npm` 的依赖中。（要自己用可以执行 `npm install semver` ）
 :::
 
-可用的"数字"或者"范围"见 [semver](//npmjs.org/doc/misc/semver.html)。
+可用的"数字"或者"范围"见 [semver](http://npmjs.org/doc/misc/semver.html)。
 
 ### description
 
@@ -293,7 +293,7 @@ name 是这个东西的名字。注意:
 ### scripts
 
 `"scripts"` 是一个由脚本命令组成的 `hash` 对象, 他们在包不同的生命周期中被执行。 `key` 是生命周期事件, `value` 是要运行的命令。<br>
-参见 [npm-scripts](//npmjs.org/doc/misc/npm-scripts.html)
+参见 [npm-scripts](http://npmjs.org/doc/misc/npm-scripts.html)
 
 ### config
 
@@ -310,14 +310,14 @@ name 是这个东西的名字。注意:
 
 然后有一个 `“start”` 命令引用了 `npm_package_config_port` 环境变量, 用户可以通过 `npm config set foo:port 8001` 来重写他。
 
-参见 [npm-config](//npmjs.org/doc/misc/npm-config.html) 和 [npm-scripts](//npmjs.org/doc/misc/npm-scripts.html)。
+参见 [npm-config](http://npmjs.org/doc/misc/npm-config.html) 和 [npm-scripts](http://npmjs.org/doc/misc/npm-scripts.html)。
 
 ### dependencies
 
 ::: tip 作用
 依赖是给一组包名指定版本范围的一个 `hash` 。这个版本范围是一个由一个或多个空格分隔的字符串。依赖还可以用 `tarball` 或者 `git URL` 。<br>
 请不要将测试或过渡性的依赖放在 `dependencieshash` 中。见下文的 `devDependencies` 。<br>
-详见 [semver](//npmjs.org/doc/misc/semver.html)
+详见 [semver](http://npmjs.org/doc/misc/semver.html)
 :::
 
 * `version` 必须完全和 `version` 一致
@@ -325,7 +325,7 @@ name 是这个东西的名字。注意:
 * `>=version` 同上
 * `<version` 同上
 * `<=version` 同上
-* `~version` 大约一样, 见 [semver](//npmjs.org/doc/misc/semver.html)
+* `~version` 大约一样, 见 [semver](http://npmjs.org/doc/misc/semver.html)
 * `1.2.x` , `1.2.0` , `1.2.1` , 等, 但不包括 `1.3.0` 
 * `//...` 见下文 `'依赖 URL'` 
 * `*` 所有
@@ -393,7 +393,7 @@ name 是这个东西的名字。注意:
 在这种情况下, 最好将这些附属的项目列在 `devDependencies` 中。
 :::
 
-这些东西会在执行 `npm link` 或者 `npm install` 的时候初始化, 并可以像其他 `npm` 配置参数一样管理。详见 [npm-config](//npmjs.org/doc/misc/npm-config.html)。
+这些东西会在执行 `npm link` 或者 `npm install` 的时候初始化, 并可以像其他 `npm` 配置参数一样管理。详见 [npm-config](http://npmjs.org/doc/misc/npm-config.html)。
 
 对于非特定平台的构建步骤, 比如需要编译 `CoffeeScript` , 可以用 `prepublish` 脚本去实现, 并把它依赖的包放在 `devDependency` 中。（注: `prepublish` 定义了在执行 `npm publish` 的时候先行执行的脚本）
 
@@ -565,7 +565,7 @@ if (foo) {
 
 任何配置都可以被重写, 但当然可能只有 `"tag"` 和 `"registry"` 与发布的意图有关。
 
-参见 [npm-config](//npmjs.org/doc/misc/npm-config.html) 有可以被重写的列表。
+参见 [npm-config](http://npmjs.org/doc/misc/npm-config.html) 有可以被重写的列表。
 
 ### SEE ALSO
 

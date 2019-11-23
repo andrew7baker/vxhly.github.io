@@ -45,6 +45,10 @@ module.exports = {
     ["meta", {
       "name": "viewport",
       "content": "width=device-width,initial-scale=1,user-scalable=no"
+    }],
+    ["meta", {
+      "name": "google-site-verification",
+      "content": "XCppppl60fPQTlwxDodwZIhMarkybEgwVpcEz85KTuQ"
     }]
   ],
   "theme": "reco",

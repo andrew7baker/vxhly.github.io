@@ -20,6 +20,10 @@ Ghost 采用 Node.js 编写, 默认使用 SQLite3 数据库, 非常轻量, 因�
 
 [最新版本: Ghost v0.7.4 full (zh)](http://dl.ghostchina.com/Ghost-0.7.4-zh-full.zip)
 
+::: tip 提示
+上方链接已失效，米娜桑可以通过这个来下载 [最新版本: Ghost v0.7.4 full (zh)](http://oss-blog.test.upcdn.net/Ghost-0.7.4-zh-full-master.zip)
+::
+
 版本特色: 中文汉化、支持七牛、又拍云、阿里云 OSS 存储；增加 Roon 主题；集成 node_modules , 无需忍受 `npm install --production` 的麻烦。
 
 ### Ghost 中文标准版

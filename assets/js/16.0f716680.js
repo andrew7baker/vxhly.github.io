@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[16],{273:function(n,t,e){},397:function(n,t,e){"use strict";var s=e(273);e.n(s).a},521:function(n,t,e){"use strict";e.r(t);e(397);var s=e(2),i=Object(s.a)({},(function(){var n=this.$createElement;return(this._self._c||n)("div",{staticClass:"badge-ribbon"})}),[],!1,null,null,null);t.default=i.exports}}]);

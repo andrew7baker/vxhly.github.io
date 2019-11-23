@@ -595,3 +595,155 @@ export default ballFly
 </script>
 ```
 
+## 颜色转换
+
+``` javascript
+import {
+  isArray,
+  isString
+} from 'lodash'
+
+/**
+ * @method color2Hex RGB 颜色转成 16 进制颜色
+ * @param  {String} color RGB 颜色
+ * @return {Numbe} 16 进制颜色
+ */
+export function color2Hex (color) {
+  const reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/
+  if (/^(rgb|RGB)/.test(color)) {
+    let aColor = color.replace(/(?:\(|\)|rgb|RGB)*/g, '').split(',')
+    let strHex = '#'
+    for (let i = 0; i < aColor.length; i++) {
+      let hex = Number(aColor[i]).toString(16)
+      if (hex === '0') {
+        hex += hex
+      }
+      strHex += hex
+    }
+    if (strHex.length !== 7) {
+      strHex = color
+    }
+    return strHex
+  } else if (reg.test(color)) {
+    let aNum = color.replace(/#/, '').split('')
+    if (aNum.length === 6) {
+      return color
+    } else if (aNum.length === 3) {
+      let numHex = '#'
+      for (let i = 0; i < aNum.length; i += 1) {
+        numHex += (aNum[i] + aNum[i])
+      }
+      return numHex
+    }
+  } else {
+    return color
+  }
+}
+
+/**
+ * @method color2Rgb 16 进制颜色转化成 RGB 颜色
+ * @param  {Number} color 16 进制颜色
+ * @return {String} RGB 颜色
+ */
+export function color2Rgb (color) {
+  const reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/
+  let sColor = color.toLowerCase()
+  if (sColor && reg.test(sColor)) {
+    if (sColor.length === 4) {
+      let sColorNew = '#'
+      for (let i = 1; i < 4; i += 1) {
+        sColorNew += sColor.slice(i, i + 1).concat(sColor.slice(i, i + 1))
+      }
+      sColor = sColorNew
+    }
+    // 处理六位的颜色值
+    let sColorChange = []
+    for (let i = 1; i < 7; i += 2) {
+      sColorChange.push(parseInt('0x' + sColor.slice(i, i + 2)))
+    }
+    return 'rgb(' + sColorChange.join(',') + ')'
+  } else {
+    return sColor
+  }
+}
+
+/**
+ * @method setColor 返回与 color 相近的颜色
+ * @param {String} color RGB 颜色
+ * @param {Number} hex 调整幅度,为 1～hex 的随机数
+ * @return {String | Array} RGB 颜色
+ */
+export function setColor (color, hex = 50) {
+  const getHex = (_color) => {
+    return _color.match(/\(([^)]*)\)/)[1].split(',').map(item => Number(item))
+  }
+  const setHex = (_color) => {
+    const sColorChange = _color.map(item => {
+      if (item === 255) {
+        return item - Math.floor(Math.random() * hex)
+      } else {
+        const _item = item + Math.floor(Math.random() * hex)
+        if (_item >= 255) {
+          return 255
+        } else {
+          return _item
+        }
+      }
+    })
+
+    return 'rgb(' + sColorChange.join(',') + ')'
+  }
+
+  if (isString(color)) {
+    return setHex(getHex(color))
+  } else if (isArray(color)) {
+    const newColor = color.map(item => {
+      return setHex(getHex(item))
+    })
+    return Array.from(new Set(newColor))
+  }
+}
+
+```
+
+## 导出当前目录的所有 component
+
+``` javascript
+import Vue from 'vue'
+
+const files = require.context('.', false, /\.vue$/)
+files.keys().forEach(key => {
+  Vue.component(files(key).default.name, files(key).default)
+})
+
+```
+
+## 导出当前目录的所有 mock
+
+``` javascript
+const files = require.context('.', false, /\.js$/)
+
+files.keys().forEach(key => {
+  if (key !== './mock.js') { 
+    // 排除自己 mock.js
+    files(key)
+  }
+})
+
+```
+
+## 导出当前目录的所有 modules
+
+``` javascript
+const files = require.context('.', false, /\.js$/)
+const modules = {}
+
+files.keys().forEach(key => {
+  if (key === './index.js') return
+  modules[key.replace(/(\.\/|\.js)/g, '')] = files(key).default
+})
+
+export default modules
+
+```
+

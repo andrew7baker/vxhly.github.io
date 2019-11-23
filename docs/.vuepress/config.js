@@ -167,7 +167,10 @@ module.exports = {
     }],
     ["@vuepress/pwa", {
       "serviceWorker": true,
-      "updatePopup": true
+      "updatePopup": {
+        "message": "发现新内容可用.",
+        "buttonText": "刷新"
+      }
     }],
     ["one-click-copy", {
       "copyMessage": "复制成功了, 快去粘贴使用吧 !!!"
@@ -263,6 +266,6 @@ module.exports = {
         "recoverTime": 2000
       }
     ],
-    'vue-demo'
+    "vue-demo"
   ]
 }

@@ -2,7 +2,7 @@
 author: 星火燎原@vxhly
 title: ES6 学习笔记
 categories: [web]
-tags: [JavaScript, Node.js] 
+tags: [JavaScript, Node.js, ES6] 
 date: 2017-11-17 21:35:51
 ---
 

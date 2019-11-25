@@ -2,7 +2,7 @@
 author: 星火燎原@vxhly
 title: 用 ES6 写 jquery 语法时的 this 绑定问题
 categories: [web]
-tags: [JavaScript, Node.js, jQuery]
+tags: [JavaScript, Node.js, jQuery, ES6]
 date: 2018-04-14 12:11:38
 ---
 

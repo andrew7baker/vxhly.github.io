@@ -204,7 +204,7 @@ date: 2019-04-08 10:09:47
 
 ### 不同点
 
-* Angular.js 的学习成本比 Vue.js 高，比如增加了 `Dependency Injection（依赖注入）` 特性，而 Vue.js 本身提供的 API 都比较简单、直观；而最新版的 Angular.js 直接采用 TypeScript 编写，Vue.js 3.x 版本虽然源码是采用 TypeScript 编写，但是实际项目中可以不用 TypeScript，即是一个渐进式框架
+* Angular.js 的学习成本比 Vue.js 高, 比如增加了 `Dependency Injection（依赖注入）` 特性, 而 Vue.js 本身提供的 API 都比较简单、直观；而最新版的 Angular.js 直接采用 TypeScript 编写, Vue.js 3.x 版本虽然源码是采用 TypeScript 编写, 但是实际项目中可以不用 TypeScript, 即是一个渐进式框架
 * 在性能上, Angular.js 依赖对数据做 `脏检查` , 所以 Watcher 越多越慢。Vue.js 使用基于依赖追踪的观察并且使用异步队列更新, 所以的数据都是独立触发的
 
 ## Vue 与 React 的区别

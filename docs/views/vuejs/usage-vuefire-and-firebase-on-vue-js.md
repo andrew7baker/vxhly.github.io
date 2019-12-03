@@ -14,7 +14,7 @@ Vue.js 中使用 vuefire 和 firebase 的入坑笔记
 ## firebase 简介
 
 ::: tip 简介
-Firebase 是 Google Cloud Platform 为开发者设计，提供各种工具，解决基础架构的问题。Firebase 提供基础性工作和工具，从而允许开发者专注于开发优质应用和扩大用户群。
+Firebase 是 Google Cloud Platform 为开发者设计, 提供各种工具, 解决基础架构的问题。Firebase 提供基础性工作和工具, 从而允许开发者专注于开发优质应用和扩大用户群。
 :::
 
 ## 在 Vue.js 中使用
@@ -23,7 +23,7 @@ Firebase 是 Google Cloud Platform 为开发者设计，提供各种工具，解
 npm i vuefire firebase
 ```
 
-在你的 firebase 控制台中获取你的 firebase 配置参数，并且形成形如下面的配置文件
+在你的 firebase 控制台中获取你的 firebase 配置参数, 并且形成形如下面的配置文件
 
 `firebase.config.js`
 
@@ -65,7 +65,7 @@ export const todosCollection = db.collection('todos') // 导出你拥有的 coll
 
 ## 实现 CURD
 
-新建一个 `vue` 文件，然后就可以参考以下的代码来写你的业务逻辑
+新建一个 `vue` 文件, 然后就可以参考以下的代码来写你的业务逻辑
 
 ``` vue
 <template>

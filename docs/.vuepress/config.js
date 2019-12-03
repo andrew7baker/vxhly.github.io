@@ -262,7 +262,7 @@ module.exports = {
       "dynamic-title",
       {
         "showText": "(/≧▽≦/)耶！主人最爱你了！",
-        "hideText": "(＞人＜;)呀！主人我走丢了，看到我了嘛？",
+        "hideText": "(＞人＜;)呀！主人我走丢了, 看到我了嘛？",
         "recoverTime": 2000
       }
     ],

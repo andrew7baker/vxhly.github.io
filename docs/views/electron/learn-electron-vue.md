@@ -107,3 +107,15 @@ BEGIN failed--compilation aborted at /private/var/folders/mj/n34f_bp95zq2_1fwll3
 ``` bash
 npm install electron-builder@latest -D
 ```
+
+## 坑三
+
+默认项目配置的 sass/scss 编译器为 `node-sass`, 该编译器在 Windows 环境下及其的不友好, 所以这里比较推荐的是使用 `Dart Sass`, 有兴趣的小伙伴传送门在这里 [为啥要用 Dart sass](https://vxhly.github.io/views/manual/usage-of-docker.html#%E6%8B%93%E5%B1%95-2)
+
+### 解决方案
+
+删除你的原有的 `node-sass` 依赖项, `node-sass` 和 `Dart Sass` 几乎无缝转换，所以不用担心兼容问题
+
+``` bash
+npm install sass -D
+```

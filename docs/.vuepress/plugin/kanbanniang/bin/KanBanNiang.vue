@@ -380,7 +380,7 @@
         ajax.send();
         ajax.onreadystatechange = function() {
           if (ajax.status !== 200) {
-            console.log("看板娘的CDN资源加载失败了，请稍后刷新页面重试！");
+            console.log("看板娘的CDN资源加载失败了, 请稍后刷新页面重试！");
             document.querySelector(".kanbanniang").style.display = "none";
           }
         };

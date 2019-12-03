@@ -6,7 +6,7 @@
     >
       <section class="project">
         <h1 class="project-title">My Project</h1>
-        <h4 class="project-subtitle">如果你觉得下面的项目给你带来了帮助，别忘了给个 start 吧！</h4>
+        <h4 class="project-subtitle">如果你觉得下面的项目给你带来了帮助, 别忘了给个 start 吧！</h4>
         <section
           class="project-loading"
           v-if="loading"
@@ -55,7 +55,7 @@
         this.loading = true;
         httpGet("https://api.github.com/users/vxhly/repos").then(res => {
           this.loading = false;
-          // 过滤掉私有的项目，过滤掉 fork 项目
+          // 过滤掉私有的项目, 过滤掉 fork 项目
           const projects = filter(res, item => !item.private && !item.fork);
           this.projects = orderBy(
             projects,

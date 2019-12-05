@@ -53,7 +53,7 @@ Vue.use(firestorePlugin)
 新建并在 `firebase.js` 中加入以下代码
 
 ``` javascript
-import { initializeApp } from 'firebase'
+import { initializeApp } from 'firebase/app'
 import 'firebase/firestore'
 import { firebaseConfig } from '@/firebase.config'
 

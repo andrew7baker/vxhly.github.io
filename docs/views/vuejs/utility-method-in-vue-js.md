@@ -242,6 +242,36 @@ export function timerByDiff(startDate, endDate) {
 }
 ```
 
+### 数值格式化
+
+``` javascript
+/**
+  * @methods formatNumber 数值按一定的规则进行格式化
+  *
+  * @param {Number} apart 相隔几个数字
+  * @param {Number} separator 添加的字符
+  * @param {Number|String} value 纯数字或者数字字符串
+  *
+  * @return {String} 格式化好的字符串
+  */
+formatNumber ({ apart = 3, separator = ',', value } = {}) {
+  if (!Number(value) && value) {
+    console.warn('你未正确传递值')
+  } else {
+    const rgx = new RegExp(`(\\d+)(\\d{${apart}})`)
+    const refValue = String(value)
+    const x = refValue.split('.')
+    let x1 = x[0]
+    const x2 = x.length > 1 ? '.' + x[1] : ''
+
+    while (rgx.test(x1)) {
+        x1 = x1.replace(rgx, '$1' + separator + '$2')
+    }
+    return x1 + x2
+  }
+}
+```
+
 ## 常量
 
 ### HTTP 状态信息

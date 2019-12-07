@@ -123,3 +123,47 @@ Array.from([..."JavaScipt WEB Vue.js"].filter(item => item !== " ")).join("")
 "JavaScipt WEB Vue.js".split('').reverse().join('')
 // "sj.euV BEW tpicSavaJ"
 ```
+
+## 数值格式化添加字符
+
+::: tip 需求
+对数值 `1234567890` 每隔 3 位添加一个逗号
+:::
+
+``` javascript
+String(1234567890)
+  .replace(/\d+/, function (s) {
+    return s.replace(/(\d)(?=(\d{3})+$)/g, '$1,')
+  })
+// "1,234,567,890"
+```
+
+::: tip 需求
+对电话号码 `15012365498` 每隔 4 位添加一个空格
+:::
+
+``` javascript
+String("15012365498")
+  .replace(/\d+/, function (s) {
+    return s.replace(/(\d)(?=(\d{4})+$)/g, '$1 ')
+  })
+// "150 1236 5498"
+```
+
+## 返回数组中的最大值和最小值
+
+::: tip 需求
+返回数组 `[1, 2, 3]` 中的最大值和最小值
+:::
+
+``` javascript
+Math.max(...[1, 2, 3])
+// 3
+Math.min(...[1, 2, 3])
+// 1
+Math.max.apply(null, [1, 2, 3])
+// 3
+Math.min.apply(null, [1, 2, 3])
+// 1
+```
+

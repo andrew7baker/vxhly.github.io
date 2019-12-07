@@ -2,7 +2,6 @@ module.exports = {
   "title": "Coding and Fixing",
   "description": "源于生活而高于生活",
   "dest": "public",
-  "GAID": "135391925",
   "base": "/",
   "head": [
     ["link", {
@@ -146,6 +145,12 @@ module.exports = {
     "lineNumbers": true
   },
   "plugins": [
+    [
+      '@vuepress/google-analytics',
+      {
+        'ga': 'UA-135391925-1'
+      }
+    ],
     [
       "@vuepress/last-updated",
       {

@@ -150,6 +150,21 @@ String("15012365498")
 // "150 1236 5498"
 ```
 
+::: tip 需求
+对身份证号码 `123456201910011234` 格式化成 `xxxxxx xxxx xxxx xxxx` 形式
+:::
+
+``` javascript
+String("123456201910011234")
+  .replace(/\d+/, function (s) {
+    return s.replace(/(\d)(?=(\d{4})+$)/g, '$1 ')
+      .replace(/^(?:\S*?)(\s)/, function (s) {
+        return s.replace(/ /, '')
+      })
+  })
+// "123456 2019 1001 1234"
+```
+
 ## 返回数组中的最大值和最小值
 
 ::: tip 需求

@@ -777,3 +777,93 @@ export default modules
 
 ```
 
+## 关于时间的限制
+
+::: tip 提示
+这边提供 element-ui 文档中未提及的日期选择器的自定义禁用时间
+:::
+
+### 选择今天以及今天之后的日期
+
+``` javascript
+export default {
+  data () {
+    return {
+      pickerOptions: {
+        disabledDate (time) {
+          return time.getTime() < Date.now() - 8.64e7
+        }
+      }
+    }
+  }
+}
+```
+
+### 设置选择今天以及今天以前的日期
+
+
+``` javascript
+export default {
+  data () {
+    return {
+      pickerOptions: {
+        disabledDate (time) {
+          return time.getTime() > Date.now() - 8.64e6
+        }
+      }
+    }
+  }
+}
+```
+
+### 设置选择今天之后的日期（不能选择当天时间）
+
+``` javascript
+export default {
+  data () {
+    return {
+      pickerOptions: {
+        disabledDate (time) {
+          return time.getTime() < Date.now()
+        }
+      }
+    }
+  }
+}
+```
+
+### 设置选择今天之前的日期（不能选择当天）
+
+``` javascript
+export default {
+  data () {
+    return {
+      pickerOptions: {
+        disabledDate (time) {
+          return time.getTime() > Date.now()
+        }
+      }
+    }
+  }
+}
+```
+
+### 设置选择三个月之前到今天的日期
+
+``` javascript
+export default {
+  data () {
+    return {
+      pickerOptions: {
+        disabledDate (time) {
+          let curDate = (new Date()).getTime()
+          let three = 90 * 24 * 3600 * 1000
+          let threeMonths = curDate - three
+          return time.getTime() > Date.now() || time.getTime() < threeMonths
+        }
+      }
+    }
+  }
+}
+```
+

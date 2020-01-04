@@ -365,7 +365,7 @@ wc -L /etc/passwd
 
 ## 常用的文本处理命令
 
-## tr 命令
+### tr 命令
 
 tr 命令可以用来删除一段文本信息中的某些文字。或者将其进行转换 使用方式: 
 
@@ -419,3 +419,8 @@ cat -A /etc/protocols
 cat /etc/protocols | col -x | cat -A
 ```
 
+## 福利-使用 wget 克隆网站
+
+``` bash
+wget -c -m -k -np -p -E -U Mozilla –no-check-certificate [URL]
+```
